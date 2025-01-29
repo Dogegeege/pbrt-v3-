@@ -1,0 +1,62 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/ext/ptex/src/doc/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "share/doc/ptex",
+			"paths" : 
+			[
+				{
+					"from" : "src/ext/ptex/src/doc/ptex",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "share/doc/ptex",
+			"paths" : 
+			[
+				"src/ext/ptex/src/doc/uvellipse.png"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/ext/ptex/src/doc",
+		"source" : "src/ext/ptex/src/doc"
+	}
+}

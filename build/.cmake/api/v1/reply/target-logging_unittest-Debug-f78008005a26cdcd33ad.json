@@ -1,0 +1,196 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/ext/glog/logging_unittest.exe"
+		},
+		{
+			"path" : "src/ext/glog/logging_unittest.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"INCLUDE_DIRECTORIES"
+		],
+		"files" : 
+		[
+			"src/ext/glog/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 457,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 461,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 303,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 319,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /D _CRT_SECURE_NO_WARNINGS -D PBRT_HAVE_MEMORY_H -D PBRT_HAVE_HEX_FP_CONSTANTS -D PBRT_HAVE_BINARY_CONSTANTS -D PBRT_HAVE_CONSTEXPR -D PBRT_CONSTEXPR=constexpr -D PBRT_HAVE_ALIGNAS -D PBRT_HAVE_ALIGNOF -D PBRT_HAVE_NONPOD_IN_UNIONS -D PBRT_NOINLINE=__declspec(noinline) -D PBRT_HAVE__ALIGNED_MALLOC -D PBRT_THREAD_LOCAL=thread_local -D GOOGLE_GLOG_DLL_DECL="
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "GLOG_NO_ABBREVIATED_SEVERITIES"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "GOOGLE_GLOG_DLL_DECL="
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/src/ext/zlib"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/zlib"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Imath"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Half"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Iex"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/IlmImf"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/IlmBase/config"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/OpenEXR/config"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/glog"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "E:/Project/pbrt-v3/src/ext/glog/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "E:/Project/pbrt-v3/src/ext/glog/src/windows"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "glog::@d6e44c78f4c47f096089"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "ext"
+	},
+	"id" : "logging_unittest::@d6e44c78f4c47f096089",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "glog.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "logging_unittest",
+	"nameOnDisk" : "logging_unittest.exe",
+	"paths" : 
+	{
+		"build" : "src/ext/glog",
+		"source" : "src/ext/glog"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/glog/src/logging_unittest.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

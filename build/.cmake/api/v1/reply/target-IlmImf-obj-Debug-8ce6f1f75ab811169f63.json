@@ -1,0 +1,1127 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfBoxAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfCRgbaFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfChannelList.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfChannelListAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfFloatAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfFrameBuffer.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfHeader.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfIO.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfInputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfIntAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfLineOrderAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfMatrixAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfOpaqueAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfOutputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfRgbaFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfStringAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfVecAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfHuf.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfThreading.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfWav.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfLut.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfCompressor.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfRleCompressor.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfZipCompressor.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfPizCompressor.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfMisc.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfCompressionAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDoubleAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfConvert.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfPreviewImage.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfPreviewImageAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfVersion.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfChromaticities.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfChromaticitiesAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfKeyCode.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfKeyCodeAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTimeCode.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTimeCodeAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfRational.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfRationalAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfFramesPerSecond.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfStandardAttributes.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfStdIO.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfEnvmap.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfEnvmapAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfScanLineInputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTiledInputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTiledMisc.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTiledOutputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTiledRgbaFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTileDescriptionAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTileOffsets.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfRgbaYca.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfPxr24Compressor.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTestFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfStringVectorAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfMultiView.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfAcesFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfMultiPartOutputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfGenericOutputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfOutputPartData.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfMultiPartInputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfGenericInputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfPartType.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfInputPartData.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfOutputPart.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTiledOutputPart.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfInputPart.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfTiledInputPart.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepScanLineInputPart.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepScanLineOutputPart.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepScanLineInputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepScanLineOutputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepTiledInputPart.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepTiledOutputPart.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepTiledInputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepTiledOutputFile.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepFrameBuffer.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepCompositing.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfCompositeDeepScanLine.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfDeepImageStateAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfFastHuf.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfFloatVectorAttribute.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfRle.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfSystemSpecific.cpp.obj"
+		},
+		{
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/ImfZip.cpp.obj"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_LIBRARY",
+			"INCLUDE_DIRECTORIES",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"src/ext/openexr/OpenEXR/IlmImf/CMakeLists.txt",
+			"CMakeLists.txt",
+			"src/ext/openexr/CMakeLists.txt",
+			"src/ext/openexr/OpenEXR/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 133,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 303,
+				"parent" : 2
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 21,
+				"parent" : 4
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 48,
+				"parent" : 6
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /wd4275 /wd4267 /wd4244 /wd4477 /wd4996 /wd4800 /wd4334 /wd4251 /wd4305 /wd4302 /wd4311 /wd4018 /MDd /Zi /Ob0 /Od /RTC1   /D _CRT_SECURE_NO_WARNINGS -D PBRT_HAVE_MEMORY_H -D PBRT_HAVE_HEX_FP_CONSTANTS -D PBRT_HAVE_BINARY_CONSTANTS -D PBRT_HAVE_CONSTEXPR -D PBRT_CONSTEXPR=constexpr -D PBRT_HAVE_ALIGNAS -D PBRT_HAVE_ALIGNOF -D PBRT_HAVE_NONPOD_IN_UNIONS -D PBRT_NOINLINE=__declspec(noinline) -D PBRT_HAVE__ALIGNED_MALLOC -D PBRT_THREAD_LOCAL=thread_local"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "HAVE_CONFIG_H"
+				},
+				{
+					"define" : "ILM_IMF_TEST_IMAGEDIR=\"E:/Project/pbrt-v3/IlmImfTest/\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/OpenEXR/IlmImf"
+				},
+				{
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/IlmImf"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/Project/pbrt-v3/src/ext/zlib"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/zlib"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Iex"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Imath"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/IlmThread"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Half"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/IlmBase/config"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/OpenEXR/config"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/IlmImfUtil"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/exrmaketiled"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/exrenvmap"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/exrmakepreview"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/exrmultiview"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/IlmImfFuzzTest"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86
+			]
+		}
+	],
+	"id" : "IlmImf-obj::@dfce845c588ce6a45822",
+	"name" : "IlmImf-obj",
+	"paths" : 
+	{
+		"build" : "src/ext/openexr/OpenEXR/IlmImf",
+		"source" : "src/ext/openexr/OpenEXR/IlmImf"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfBoxAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfCRgbaFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfChannelList.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfChannelListAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfFloatAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfFrameBuffer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfHeader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfIO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfInputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfIntAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfLineOrderAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfMatrixAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfOpaqueAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfOutputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfRgbaFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfStringAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfVecAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfHuf.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfThreading.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfWav.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfLut.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfCompressor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfRleCompressor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfZipCompressor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfPizCompressor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfMisc.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfCompressionAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDoubleAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfConvert.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfPreviewImage.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfPreviewImageAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfVersion.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfChromaticities.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfChromaticitiesAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfKeyCode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfKeyCodeAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTimeCode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTimeCodeAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfRational.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfRationalAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfFramesPerSecond.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfStandardAttributes.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfStdIO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfEnvmap.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfEnvmapAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfScanLineInputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTiledInputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTiledMisc.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTiledOutputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTiledRgbaFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTileDescriptionAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTileOffsets.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfRgbaYca.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfPxr24Compressor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTestFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfStringVectorAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfMultiView.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfAcesFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfMultiPartOutputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfGenericOutputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfOutputPartData.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfMultiPartInputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfGenericInputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfPartType.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfInputPartData.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfOutputPart.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTiledOutputPart.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfInputPart.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfTiledInputPart.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepScanLineInputPart.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepScanLineOutputPart.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepScanLineInputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepScanLineOutputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepTiledInputPart.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepTiledOutputPart.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepTiledInputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepTiledOutputFile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepFrameBuffer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepCompositing.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfCompositeDeepScanLine.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfDeepImageStateAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfFastHuf.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfFloatVectorAttribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfRle.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfSystemSpecific.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/openexr/OpenEXR/IlmImf/ImfZip.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

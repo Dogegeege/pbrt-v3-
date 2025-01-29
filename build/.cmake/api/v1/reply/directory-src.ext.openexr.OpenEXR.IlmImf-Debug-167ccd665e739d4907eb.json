@@ -1,0 +1,158 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"src/ext/openexr/OpenEXR/IlmImf/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 175,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 182,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files (x86)/PBRT-V3/lib",
+			"paths" : 
+			[
+				"src/ext/openexr/OpenEXR/IlmImf/IlmImf.lib"
+			],
+			"targetId" : "IlmImf::@dfce845c588ce6a45822",
+			"targetIndex" : 22,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "IlmImf::@dfce845c588ce6a45822",
+				"index" : 22
+			},
+			"destination" : "C:/Program Files (x86)/PBRT-V3/lib",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files (x86)/PBRT-V3/include/OpenEXR",
+			"paths" : 
+			[
+				"src/ext/openexr/OpenEXR/IlmImf/ImfForward.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfExport.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfBoxAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfCRgbaFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfChannelList.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfChannelListAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfCompressionAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDoubleAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfFloatAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfFrameBuffer.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfHeader.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfIO.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfInputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfIntAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfLineOrderAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfMatrixAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfOpaqueAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfOutputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfRgbaFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfStringAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfVecAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfHuf.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfWav.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfLut.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfArray.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfCompression.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfLineOrder.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfName.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfPixelType.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfVersion.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfXdr.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfConvert.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfPreviewImage.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfPreviewImageAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfChromaticities.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfChromaticitiesAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfKeyCode.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfKeyCodeAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfTimeCode.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfTimeCodeAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfRational.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfRationalAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfFramesPerSecond.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfStandardAttributes.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfEnvmap.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfEnvmapAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfInt64.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfRgba.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfTileDescription.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfTileDescriptionAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfTiledInputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfTiledOutputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfTiledRgbaFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfRgbaYca.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfTestFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfThreading.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfB44Compressor.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfStringVectorAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfMultiView.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfAcesFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfMultiPartOutputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfGenericOutputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfMultiPartInputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfGenericInputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfPartType.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfPartHelper.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfOutputPart.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfTiledOutputPart.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfInputPart.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfTiledInputPart.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepScanLineOutputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepScanLineOutputPart.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepScanLineInputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepScanLineInputPart.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepTiledInputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepTiledInputPart.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepTiledOutputFile.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepTiledOutputPart.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepFrameBuffer.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepCompositing.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfCompositeDeepScanLine.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfNamespace.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfMisc.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepImageState.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfDeepImageStateAttribute.h",
+				"src/ext/openexr/OpenEXR/IlmImf/ImfFloatVectorAttribute.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/ext/openexr/OpenEXR/IlmImf",
+		"source" : "src/ext/openexr/OpenEXR/IlmImf"
+	}
+}

@@ -1,0 +1,3647 @@
+{
+	"entries" : 
+	[
+		{
+			"name" : "BUILD_SHARED_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : " "
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "BUILD_TESTING",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Build the testing tree."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
+		},
+		{
+			"name" : "BZRCOMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_AR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/lib.exe"
+		},
+		{
+			"name" : "CMAKE_BACKWARDS_COMPATIBILITY",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "For backwards compatibility, what version of CMake commands and syntax should this version of CMake try to support."
+				}
+			],
+			"type" : "STRING",
+			"value" : "2.4"
+		},
+		{
+			"name" : "CMAKE_BUILD_TYPE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "STRING",
+			"value" : "Debug"
+		},
+		{
+			"name" : "CMAKE_CACHEFILE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "This is the directory where this CMakeCache.txt was created"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "e:/Project/pbrt-v3/build"
+		},
+		{
+			"name" : "CMAKE_CACHE_MAJOR_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Major version of cmake used to create the current loaded cache"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "3"
+		},
+		{
+			"name" : "CMAKE_CACHE_MINOR_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Minor version of cmake used to create the current loaded cache"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "29"
+		},
+		{
+			"name" : "CMAKE_CACHE_PATCH_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Patch version of cmake used to create the current loaded cache"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "4"
+		},
+		{
+			"name" : "CMAKE_COLOR_MAKEFILE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable/Disable color output during build."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
+		},
+		{
+			"name" : "CMAKE_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to CMake executable."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "C:/CMake/bin/cmake.exe"
+		},
+		{
+			"name" : "CMAKE_CPACK_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to cpack program executable."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "C:/CMake/bin/cpack.exe"
+		},
+		{
+			"name" : "CMAKE_CTEST_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to ctest program executable."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "C:/CMake/bin/ctest.exe"
+		},
+		{
+			"name" : "CMAKE_CXX_COMPILER",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "CXX compiler"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe"
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the CXX compiler during all build types."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the CXX compiler during DEBUG builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/MDd /Zi /Ob0 /Od /RTC1"
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS_MINSIZEREL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the CXX compiler during MINSIZEREL builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/MD /O1 /Ob1 /DNDEBUG"
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the CXX compiler during RELEASE builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/MD /O2 /Ob2 /DNDEBUG"
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS_RELWITHDEBINFO",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the CXX compiler during RELWITHDEBINFO builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/MD /Zi /O2 /Ob1 /DNDEBUG"
+		},
+		{
+			"name" : "CMAKE_CXX_STANDARD_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Libraries linked by default with all C++ applications."
+				}
+			],
+			"type" : "STRING",
+			"value" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib"
+		},
+		{
+			"name" : "CMAKE_C_COMPILER",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "C compiler"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe"
+		},
+		{
+			"name" : "CMAKE_C_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the C compiler during all build types."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/DWIN32 /D_WINDOWS /W3"
+		},
+		{
+			"name" : "CMAKE_C_FLAGS_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the C compiler during DEBUG builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/MDd /Zi /Ob0 /Od /RTC1"
+		},
+		{
+			"name" : "CMAKE_C_FLAGS_MINSIZEREL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the C compiler during MINSIZEREL builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/MD /O1 /Ob1 /DNDEBUG"
+		},
+		{
+			"name" : "CMAKE_C_FLAGS_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the C compiler during RELEASE builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/MD /O2 /Ob2 /DNDEBUG"
+		},
+		{
+			"name" : "CMAKE_C_FLAGS_RELWITHDEBINFO",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the C compiler during RELWITHDEBINFO builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/MD /Zi /O2 /Ob1 /DNDEBUG"
+		},
+		{
+			"name" : "CMAKE_C_STANDARD_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Libraries linked by default with all C applications."
+				}
+			],
+			"type" : "STRING",
+			"value" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib"
+		},
+		{
+			"name" : "CMAKE_EDIT_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to cache edit program executable."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "C:/CMake/bin/cmake-gui.exe"
+		},
+		{
+			"name" : "CMAKE_EXECUTABLE_FORMAT",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Executable file format"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "Unknown"
+		},
+		{
+			"name" : "CMAKE_EXE_LINKER_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during all build types."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/machine:x64"
+		},
+		{
+			"name" : "CMAKE_EXE_LINKER_FLAGS_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during DEBUG builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/debug /INCREMENTAL"
+		},
+		{
+			"name" : "CMAKE_EXE_LINKER_FLAGS_MINSIZEREL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during MINSIZEREL builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/INCREMENTAL:NO"
+		},
+		{
+			"name" : "CMAKE_EXE_LINKER_FLAGS_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during RELEASE builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/INCREMENTAL:NO"
+		},
+		{
+			"name" : "CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during RELWITHDEBINFO builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/debug /INCREMENTAL"
+		},
+		{
+			"name" : "CMAKE_EXPORT_COMPILE_COMMANDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "CMAKE_EXTRA_GENERATOR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Name of external makefile project generator."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_FIND_PACKAGE_REDIRECTS_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake."
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/build/CMakeFiles/pkgRedirects"
+		},
+		{
+			"name" : "CMAKE_GENERATOR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Name of generator."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "MinGW Makefiles"
+		},
+		{
+			"name" : "CMAKE_GENERATOR_INSTANCE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Generator instance identifier."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_GENERATOR_PLATFORM",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Name of generator platform."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_GENERATOR_TOOLSET",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Name of generator toolset."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_HAVE_LIBC_PTHREAD",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test CMAKE_HAVE_LIBC_PTHREAD"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_HAVE_PTHREADS_CREATE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have library pthreads"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_HAVE_PTHREAD_CREATE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have library pthread"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_HOME_DIRECTORY",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Source directory with the top level CMakeLists.txt file for this project"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "E:/Project/pbrt-v3"
+		},
+		{
+			"name" : "CMAKE_INSTALL_BINDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "User executables (bin)"
+				}
+			],
+			"type" : "PATH",
+			"value" : "bin"
+		},
+		{
+			"name" : "CMAKE_INSTALL_DATADIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Read-only architecture-independent data (DATAROOTDIR)"
+				}
+			],
+			"type" : "PATH",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_INSTALL_DATAROOTDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Read-only architecture-independent data root (share)"
+				}
+			],
+			"type" : "PATH",
+			"value" : "share"
+		},
+		{
+			"name" : "CMAKE_INSTALL_DOCDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Documentation root (DATAROOTDIR/doc/PROJECT_NAME)"
+				}
+			],
+			"type" : "PATH",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_INSTALL_INCLUDEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "C header files (include)"
+				}
+			],
+			"type" : "PATH",
+			"value" : "include"
+		},
+		{
+			"name" : "CMAKE_INSTALL_INFODIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Info documentation (DATAROOTDIR/info)"
+				}
+			],
+			"type" : "PATH",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_INSTALL_LIBDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Object code libraries (lib)"
+				}
+			],
+			"type" : "PATH",
+			"value" : "lib"
+		},
+		{
+			"name" : "CMAKE_INSTALL_LIBEXECDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Program executables (libexec)"
+				}
+			],
+			"type" : "PATH",
+			"value" : "libexec"
+		},
+		{
+			"name" : "CMAKE_INSTALL_LOCALEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Locale-dependent data (DATAROOTDIR/locale)"
+				}
+			],
+			"type" : "PATH",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_INSTALL_LOCALSTATEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Modifiable single-machine data (var)"
+				}
+			],
+			"type" : "PATH",
+			"value" : "var"
+		},
+		{
+			"name" : "CMAKE_INSTALL_MANDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Man documentation (DATAROOTDIR/man)"
+				}
+			],
+			"type" : "PATH",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_INSTALL_OLDINCLUDEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "C header files for non-gcc (/usr/include)"
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "CMAKE_INSTALL_PREFIX",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Install path prefix, prepended onto install directories."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Program Files (x86)/PBRT-V3"
+		},
+		{
+			"name" : "CMAKE_INSTALL_RUNSTATEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Run-time variable data (LOCALSTATEDIR/run)"
+				}
+			],
+			"type" : "PATH",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_INSTALL_SBINDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "System admin executables (sbin)"
+				}
+			],
+			"type" : "PATH",
+			"value" : "sbin"
+		},
+		{
+			"name" : "CMAKE_INSTALL_SHAREDSTATEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Modifiable architecture-independent data (com)"
+				}
+			],
+			"type" : "PATH",
+			"value" : "com"
+		},
+		{
+			"name" : "CMAKE_INSTALL_SYSCONFDIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Read-only single-machine data (etc)"
+				}
+			],
+			"type" : "PATH",
+			"value" : "etc"
+		},
+		{
+			"name" : "CMAKE_LINKER",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/link.exe"
+		},
+		{
+			"name" : "CMAKE_MAKE_PROGRAM",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/MinGW64/bin/mingw32-make.exe"
+		},
+		{
+			"name" : "CMAKE_MODULE_LINKER_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of modules during all build types."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/machine:x64"
+		},
+		{
+			"name" : "CMAKE_MODULE_LINKER_FLAGS_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of modules during DEBUG builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/debug /INCREMENTAL"
+		},
+		{
+			"name" : "CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of modules during MINSIZEREL builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/INCREMENTAL:NO"
+		},
+		{
+			"name" : "CMAKE_MODULE_LINKER_FLAGS_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of modules during RELEASE builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/INCREMENTAL:NO"
+		},
+		{
+			"name" : "CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of modules during RELWITHDEBINFO builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/debug /INCREMENTAL"
+		},
+		{
+			"name" : "CMAKE_MT",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.19041.0/x64/mt.exe"
+		},
+		{
+			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "number of local generators"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "17"
+		},
+		{
+			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Platform information initialized"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "CMAKE_PROJECT_DESCRIPTION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_PROJECT_HOMEPAGE_URL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_PROJECT_NAME",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "PBRT-V3"
+		},
+		{
+			"name" : "CMAKE_RANLIB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "noop for ranlib"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ":"
+		},
+		{
+			"name" : "CMAKE_RC_COMPILER",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "RC compiler"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files (x86)/Windows Kits/10/bin/10.0.19041.0/x64/rc.exe"
+		},
+		{
+			"name" : "CMAKE_RC_COMPILER_WORKS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "CMAKE_RC_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags for Windows Resource Compiler during all build types."
+				}
+			],
+			"type" : "STRING",
+			"value" : "-DWIN32"
+		},
+		{
+			"name" : "CMAKE_RC_FLAGS_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags for Windows Resource Compiler during DEBUG builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "-D_DEBUG"
+		},
+		{
+			"name" : "CMAKE_RC_FLAGS_MINSIZEREL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags for Windows Resource Compiler during MINSIZEREL builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_RC_FLAGS_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags for Windows Resource Compiler during RELEASE builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_RC_FLAGS_RELWITHDEBINFO",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags for Windows Resource Compiler during RELWITHDEBINFO builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_ROOT",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to CMake installation."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "C:/CMake/share/cmake-3.29"
+		},
+		{
+			"name" : "CMAKE_SHARED_LINKER_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of shared libraries during all build types."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/machine:x64"
+		},
+		{
+			"name" : "CMAKE_SHARED_LINKER_FLAGS_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of shared libraries during DEBUG builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/debug /INCREMENTAL"
+		},
+		{
+			"name" : "CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of shared libraries during MINSIZEREL builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/INCREMENTAL:NO"
+		},
+		{
+			"name" : "CMAKE_SHARED_LINKER_FLAGS_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of shared libraries during RELEASE builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/INCREMENTAL:NO"
+		},
+		{
+			"name" : "CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of shared libraries during RELWITHDEBINFO builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/debug /INCREMENTAL"
+		},
+		{
+			"name" : "CMAKE_SKIP_INSTALL_RPATH",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "If set, runtime paths are not added when installing shared libraries, but are added when building."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "NO"
+		},
+		{
+			"name" : "CMAKE_SKIP_RPATH",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "If set, runtime paths are not added when using shared libraries."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "NO"
+		},
+		{
+			"name" : "CMAKE_STATIC_LINKER_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of static libraries during all build types."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/machine:x64"
+		},
+		{
+			"name" : "CMAKE_STATIC_LINKER_FLAGS_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of static libraries during DEBUG builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of static libraries during MINSIZEREL builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_STATIC_LINKER_FLAGS_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of static libraries during RELEASE builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the linker during the creation of static libraries during RELWITHDEBINFO builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_VERBOSE_MAKEFILE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "If this value is on, makefiles will be generated without the .SILENT directive, and all commands will be echoed to the console during the make.  This is useful for debugging only. With Visual Studio IDE projects all commands are done without /nologo."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "FALSE"
+		},
+		{
+			"name" : "COVERAGE_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to the coverage program that CTest uses for performing coverage inspection"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/MinGW64/bin/gcov.exe"
+		},
+		{
+			"name" : "COVERAGE_EXTRA_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Extra command line flags to pass to the coverage tool"
+				}
+			],
+			"type" : "STRING",
+			"value" : "-l"
+		},
+		{
+			"name" : "CPACK_BINARY_7Z",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable to build 7-Zip packages"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "CPACK_BINARY_IFW",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable to build IFW packages"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "CPACK_BINARY_INNOSETUP",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable to build Inno Setup packages"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "CPACK_BINARY_NSIS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable to build NSIS packages"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
+		},
+		{
+			"name" : "CPACK_BINARY_NUGET",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable to build NuGet packages"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "CPACK_BINARY_WIX",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable to build WiX packages"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "CPACK_BINARY_ZIP",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable to build ZIP packages"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "CPACK_SOURCE_7Z",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable to build 7-Zip source packages"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
+		},
+		{
+			"name" : "CPACK_SOURCE_ZIP",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable to build ZIP source packages"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
+		},
+		{
+			"name" : "CTEST_SUBMIT_RETRY_COUNT",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "How many times to retry timed-out CTest submissions."
+				}
+			],
+			"type" : "STRING",
+			"value" : "3"
+		},
+		{
+			"name" : "CTEST_SUBMIT_RETRY_DELAY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "How long to wait between timed-out CTest submissions."
+				}
+			],
+			"type" : "STRING",
+			"value" : "5"
+		},
+		{
+			"name" : "CVSCOMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : ""
+		},
+		{
+			"name" : "CVS_UPDATE_OPTIONS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : ""
+		},
+		{
+			"name" : "DART_TESTING_TIMEOUT",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Maximum time allowed before CTest will kill the test."
+				}
+			],
+			"type" : "STRING",
+			"value" : "1500"
+		},
+		{
+			"name" : "DOXYGEN_DOT_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dot tool for use with Doxygen"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "DOXYGEN_DOT_EXECUTABLE-NOTFOUND"
+		},
+		{
+			"name" : "DOXYGEN_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Doxygen documentation generation tool (https://www.doxygen.nl)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files/doxygen/bin/doxygen.exe"
+		},
+		{
+			"name" : "EXECUTABLE_OUTPUT_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Single output directory for building all executables."
+				}
+			],
+			"type" : "PATH",
+			"value" : ""
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Doxygen",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding Doxygen"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[C:/Program Files/doxygen/bin/doxygen.exe][cfound components: doxygen missing components: dot][v1.13.1()]"
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding Threads"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[TRUE][v()]"
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_ZLIB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding ZLIB"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[zlibstatic][E:/Project/pbrt-v3/src/ext/zlib][c ][v1.2.8()]"
+		},
+		{
+			"name" : "GITCOMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "GITCOMMAND-NOTFOUND"
+		},
+		{
+			"name" : "HAVE_ALIGNAS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_ALIGNAS"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_ALIGNOF",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_ALIGNOF"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_ALLOCA_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have includes alloca.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_ATTRIBUTE_NOINLINE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_ATTRIBUTE_NOINLINE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_BINARY_CONSTANTS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_BINARY_CONSTANTS"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_CONSTEXPR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_CONSTEXPR"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_DECLSPEC_NOINLINE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_DECLSPEC_NOINLINE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_DECLSPEC_THREAD",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_DECLSPEC_THREAD"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_DLADDR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have function dladdr"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_DLFCN_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include dlfcn.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_EXECINFO_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include execinfo.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_EXT_HASH_MAP",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include ext/hash_map"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_EXT_HASH_SET",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include ext/hash_set"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_EXT_SLIST",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include ext/slist"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_FCNTL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have function fcntl"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_FSEEKO",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have function fseeko"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_GCC_INLINE_ASM_AVX",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_GCC_INLINE_ASM_AVX"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_GLOB_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include glob.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_HAVE_UINT16_T",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Result of TRY_COMPILE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "HAVE_HAVE_U_INT16_T",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Result of TRY_COMPILE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "FALSE"
+		},
+		{
+			"name" : "HAVE_HAVE___UINT16",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Result of TRY_COMPILE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "HAVE_HEX_FP_CONSTANTS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_HEX_FP_CONSTANTS"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_INTTYPES_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include inttypes.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_ITIMER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_ITIMER"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_ITIMER_COMPILED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Result of TRY_COMPILE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "FALSE"
+		},
+		{
+			"name" : "HAVE_LIBUNWIND_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include libunwind.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_LIB_UNWIND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have library unwind"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_MEMALIGN",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_MEMALIGN"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_MEMORY_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include memory.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_MMAP",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_MMAP"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_NAMESPACES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_NAMESPACES"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_NONPOD_IN_UNIONS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_NONPOD_IN_UNIONS"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_NO_DEPRECATED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_NO_DEPRECATED"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_OFF64_T",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Result of TRY_COMPILE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "FALSE"
+		},
+		{
+			"name" : "HAVE_POSIX_MEMALIGN",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_POSIX_MEMALIGN"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_PREAD",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have function pread"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_PWD_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include pwd.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_PWRITE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have function pwrite"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_RWLOCK",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_RWLOCK"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_SIGACTION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have function sigaction"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_SIGALSTACK",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have function sigaltstack"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_SNPRINTF",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have symbol snprintf"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_STDDEF_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include stddef.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_STDINT_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include stdint.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_STDLIB_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include stdlib.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_STRINGS_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include strings.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_STRING_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include string.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_SYSCALL_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include syscall.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_SYSCONF_NPROCESSORS_ONLN",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_SYSCONF_NPROCESSORS_ONLN"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_SYSLOG_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include syslog.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_SYS_STAT_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include sys/stat.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_SYS_SYSCALL_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include sys/syscall.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_SYS_TIME_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include sys/time.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_SYS_TYPES_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include sys/types.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_SYS_UTSNAME_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include sys/utsname.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_THREAD_LOCAL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_THREAD_LOCAL"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_TR1_UNORDERED_MAP",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include tr1/unordered_map"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_TR1_UNORDERED_SET",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include tr1/unordered_set"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_UCONTEXT_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include ucontext.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_UINT16_T",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "CHECK_TYPE_SIZE: sizeof(uint16_t)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "2"
+		},
+		{
+			"name" : "HAVE_UNISTD_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include unistd.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_UNORDERED_MAP",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include unordered_map"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_UNORDERED_SET",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include unordered_set"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_UNWIND_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include unwind.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE_USING_OPERATOR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE_USING_OPERATOR"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE_U_INT16_T",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "CHECK_TYPE_SIZE: u_int16_t unknown"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE__ALIGNED_MALLOC",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE__ALIGNED_MALLOC"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE___ATTRIBUTE__",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE___ATTRIBUTE__"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE___ATTRIBUTE__VISIBILITY_DEFAULT",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE___ATTRIBUTE__VISIBILITY_DEFAULT"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE___ATTRIBUTE__VISIBILITY_HIDDEN",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE___ATTRIBUTE__VISIBILITY_HIDDEN"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE___BUILTIN_EXPECT",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE___BUILTIN_EXPECT"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE___DECLSPEC",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE___DECLSPEC"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "HAVE___SYNC_VAL_COMPARE_AND_SWAP",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE___SYNC_VAL_COMPARE_AND_SWAP"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE___THREAD",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test HAVE___THREAD"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "HAVE___UINT16",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "CHECK_TYPE_SIZE: sizeof(unsigned __int16)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "2"
+		},
+		{
+			"name" : "HGCOMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : ""
+		},
+		{
+			"name" : "ILMBASE_BUILD_SHARED_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Build Shared Libraries"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "ILMBASE_NAMESPACE_VERSIONING",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Namespace Versioning"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "ILMIMF_BUILD_TESTS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Build IlmBase tests?"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "ILMIMF_CREATE_LIBTOOL_FILE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Create libtool files?"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "ILMIMF_INSTALL_PKGCONFIG",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Install pkgconfig files?"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "INSTALL_BIN_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Installation directory for executables"
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Program Files (x86)/PBRT-V3/bin"
+		},
+		{
+			"name" : "INSTALL_INC_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Installation directory for headers"
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Program Files (x86)/PBRT-V3/include"
+		},
+		{
+			"name" : "INSTALL_LIB_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Installation directory for libraries"
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Program Files (x86)/PBRT-V3/lib"
+		},
+		{
+			"name" : "INSTALL_MAN_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Installation directory for manual pages"
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Program Files (x86)/PBRT-V3/share/man"
+		},
+		{
+			"name" : "INSTALL_PKGCONFIG_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Installation directory for pkgconfig (.pc) files"
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Program Files (x86)/PBRT-V3/share/pkgconfig"
+		},
+		{
+			"name" : "IexMath_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;Iex;"
+		},
+		{
+			"name" : "IlmImf_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;Half;general;Iex;general;Imath;general;IlmThread;general;zlibstatic;"
+		},
+		{
+			"name" : "IlmThread_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;Iex;"
+		},
+		{
+			"name" : "Imath_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;Iex;"
+		},
+		{
+			"name" : "LIBRARY_OUTPUT_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Single output directory for building all libraries."
+				}
+			],
+			"type" : "PATH",
+			"value" : ""
+		},
+		{
+			"name" : "MAKECOMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Command to build the project"
+				}
+			],
+			"type" : "STRING",
+			"value" : "C:/CMake/bin/cmake.exe --build . --config \"${CTEST_CONFIGURATION_TYPE}\" -- -i"
+		},
+		{
+			"name" : "MEMORYCHECK_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to the memory checking command, used for memory error detection."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "MEMORYCHECK_COMMAND-NOTFOUND"
+		},
+		{
+			"name" : "MEMORYCHECK_SUPPRESSIONS_FILE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "File that contains suppressions for the memory checker"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : ""
+		},
+		{
+			"name" : "OFF64_T",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "CHECK_TYPE_SIZE: off64_t unknown"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "OPENEXR_BUILD_EXAMPLES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Build OpenEXR examples?"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "OPENEXR_BUILD_SHARED_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Build Shared Libraries"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "OPENEXR_BUILD_TESTS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Build OpenEXR tests?"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "OPENEXR_BUILD_UTILS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Build OpenEXR utilities?"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "OPENEXR_INSTALL_DOCS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Install OpenEXR examples?"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "OPENEXR_INSTALL_EXAMPLES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Install OpenEXR examples?"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "OPENEXR_NAMESPACE_VERSIONING",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Use Namespace Versioning"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "OPENEXR_USE_ZLIB_WINAPI",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Use ZLib Win API"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "P4COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : ""
+		},
+		{
+			"name" : "PBRT-V3_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/build"
+		},
+		{
+			"name" : "PBRT-V3_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "PBRT-V3_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3"
+		},
+		{
+			"name" : "PBRT_FLOAT_AS_DOUBLE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Use 64-bit floats"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "PBRT_SAMPLED_SPECTRUM",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Use SampledSpectrum rather than RGBSpectrum"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "PTEX_BUILD_SHARED_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable building Ptex shared libraries"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "PTEX_BUILD_STATIC_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable building Ptex static libraries"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
+		},
+		{
+			"name" : "Ptex_static_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;zlibstatic;"
+		},
+		{
+			"name" : "SANITIZE_ADDRESS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable AddressSanitizer for sanitized targets."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "SANITIZE_LINK_STATIC",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Try to link static against sanitizers."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "SANITIZE_MEMORY",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable MemorySanitizer for sanitized targets."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "SANITIZE_THREAD",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable ThreadSanitizer for sanitized targets."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "SANITIZE_UNDEFINED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable UndefinedBehaviorSanitizer for sanitized targets."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "SITE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Name of the computer/site where compile is being run"
+				}
+			],
+			"type" : "STRING",
+			"value" : "Dog_E"
+		},
+		{
+			"name" : "STL_NO_NAMESPACE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test STL_NO_NAMESPACE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "STL_STD_NAMESPACE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test STL_STD_NAMESPACE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "SVNCOMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : ""
+		},
+		{
+			"name" : "UNWIND_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "unwind library"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "UNWIND_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "WITH_GFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Use gflags"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "WITH_THREADS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable multithreading support"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
+		},
+		{
+			"name" : "ZLIB_BUILD_AMD64",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable building amd64 assembly implementation"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "ZLIB_BUILD_ASM686",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable building i686 assembly implementation"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "ZLIB_BUILD_EXAMPLES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable building zlib examples"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "ZLIB_BUILD_SHARED_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable building zlib shared libraries"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "ZLIB_BUILD_STATIC_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable building zlib static libraries"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
+		},
+		{
+			"name" : "ZLIB_INCLUDE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a file."
+				}
+			],
+			"type" : "PATH",
+			"value" : "ZLIB_INCLUDE_DIR-NOTFOUND"
+		},
+		{
+			"name" : "ZLIB_LIBRARY_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "ZLIB_LIBRARY_DEBUG-NOTFOUND"
+		},
+		{
+			"name" : "ZLIB_LIBRARY_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "ZLIB_LIBRARY_RELEASE-NOTFOUND"
+		},
+		{
+			"name" : "Z_HAVE_UNISTD_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include unistd.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "CMAKE_INSTALL_PREFIX during last run"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "C:/Program Files (x86)/PBRT-V3"
+		},
+		{
+			"name" : "google-glog_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/build/src/ext/glog"
+		},
+		{
+			"name" : "google-glog_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "google-glog_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/src/ext/glog"
+		},
+		{
+			"name" : "ilmbase_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/build/src/ext/openexr/IlmBase"
+		},
+		{
+			"name" : "ilmbase_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "ilmbase_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase"
+		},
+		{
+			"name" : "openexr_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/build/src/ext/openexr/OpenEXR"
+		},
+		{
+			"name" : "openexr_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "openexr_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR"
+		},
+		{
+			"name" : "ptex_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/build/src/ext/ptex"
+		},
+		{
+			"name" : "ptex_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "ptex_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/src/ext/ptex"
+		},
+		{
+			"name" : "zlib_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/build/src/ext/zlib"
+		},
+		{
+			"name" : "zlib_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "zlib_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/Project/pbrt-v3/src/ext/zlib"
+		}
+	],
+	"kind" : "cache",
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

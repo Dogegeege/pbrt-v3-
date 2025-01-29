@@ -1,0 +1,75 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"src/ext/openexr/IlmBase/Half/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 45,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 51,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"src/ext/openexr/IlmBase/Half/Half.lib"
+			],
+			"targetId" : "Half::@f1a5a8dbbb666411b166",
+			"targetIndex" : 19,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "Half::@f1a5a8dbbb666411b166",
+				"index" : 19
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/OpenEXR",
+			"paths" : 
+			[
+				"src/ext/openexr/IlmBase/Half/half.h",
+				"src/ext/openexr/IlmBase/Half/halfFunction.h",
+				"src/ext/openexr/IlmBase/Half/halfExport.h",
+				"src/ext/openexr/IlmBase/Half/halfLimits.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/ext/openexr/IlmBase/Half",
+		"source" : "src/ext/openexr/IlmBase/Half"
+	}
+}

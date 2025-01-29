@@ -1,0 +1,78 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"src/ext/openexr/IlmBase/IlmThread/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 31,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"src/ext/openexr/IlmBase/IlmThread/IlmThread.lib"
+			],
+			"targetId" : "IlmThread::@c9e64c6c3428d436a6ce",
+			"targetIndex" : 24,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "IlmThread::@c9e64c6c3428d436a6ce",
+				"index" : 24
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/OpenEXR",
+			"paths" : 
+			[
+				"src/ext/openexr/IlmBase/IlmThread/IlmThreadPool.h",
+				"src/ext/openexr/IlmBase/IlmThread/IlmThread.h",
+				"src/ext/openexr/IlmBase/IlmThread/IlmThreadSemaphore.h",
+				"src/ext/openexr/IlmBase/IlmThread/IlmThreadMutex.h",
+				"src/ext/openexr/IlmBase/IlmThread/IlmThreadNamespace.h",
+				"src/ext/openexr/IlmBase/IlmThread/IlmThreadExport.h",
+				"src/ext/openexr/IlmBase/IlmThread/IlmThreadForward.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/ext/openexr/IlmBase/IlmThread",
+		"source" : "src/ext/openexr/IlmBase/IlmThread"
+	}
+}

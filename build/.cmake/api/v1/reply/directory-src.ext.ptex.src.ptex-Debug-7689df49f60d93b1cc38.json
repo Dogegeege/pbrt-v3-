@@ -1,0 +1,76 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/ext/ptex/src/ptex/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 21,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 31,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"src/ext/ptex/src/ptex/Ptex.lib"
+			],
+			"targetId" : "Ptex_static::@a7b58488bffeb11cd167",
+			"targetIndex" : 36,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "Ptex_static::@a7b58488bffeb11cd167",
+				"index" : 36
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"src/ext/ptex/src/ptex/PtexHalf.h",
+				"src/ext/ptex/src/ptex/PtexInt.h",
+				"src/ext/ptex/src/ptex/Ptexture.h",
+				"src/ext/ptex/src/ptex/PtexUtils.h",
+				"src/ext/ptex/src/ptex/PtexVersion.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/ext/ptex/src/ptex",
+		"source" : "src/ext/ptex/src/ptex"
+	}
+}

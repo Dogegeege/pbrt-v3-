@@ -1,0 +1,94 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/ext/zlib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 235,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 240,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 243,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 246,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files (x86)/PBRT-V3/lib",
+			"paths" : 
+			[
+				"src/ext/zlib/zlibstatic.lib"
+			],
+			"targetId" : "zlibstatic::@73c077a40ae8d9707783",
+			"targetIndex" : 60,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files (x86)/PBRT-V3/include",
+			"paths" : 
+			[
+				"build/src/ext/zlib/zconf.h",
+				"src/ext/zlib/zlib.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files (x86)/PBRT-V3/share/man/man3",
+			"paths" : 
+			[
+				"src/ext/zlib/zlib.3"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files (x86)/PBRT-V3/share/pkgconfig",
+			"paths" : 
+			[
+				"build/src/ext/zlib/zlib.pc"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/ext/zlib",
+		"source" : "src/ext/zlib"
+	}
+}

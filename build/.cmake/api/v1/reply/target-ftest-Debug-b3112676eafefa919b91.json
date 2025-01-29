@@ -1,0 +1,238 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/ext/ptex/src/tests/ftest.exe"
+		},
+		{
+			"path" : "src/ext/ptex/src/tests/ftest.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"add_definitions",
+			"INCLUDE_DIRECTORIES",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"src/ext/ptex/src/tests/CMakeLists.txt",
+			"src/ext/ptex/src/ptex/CMakeLists.txt",
+			"CMakeLists.txt",
+			"src/ext/ptex/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 20,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 303,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 319,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 343,
+				"parent" : 6
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 47,
+				"parent" : 10
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /D _CRT_SECURE_NO_WARNINGS -D PBRT_HAVE_MEMORY_H -D PBRT_HAVE_HEX_FP_CONSTANTS -D PBRT_HAVE_BINARY_CONSTANTS -D PBRT_HAVE_CONSTEXPR -D PBRT_CONSTEXPR=constexpr -D PBRT_HAVE_ALIGNAS -D PBRT_HAVE_ALIGNOF -D PBRT_HAVE_NONPOD_IN_UNIONS -D PBRT_NOINLINE=__declspec(noinline) -D PBRT_HAVE__ALIGNED_MALLOC -D PBRT_THREAD_LOCAL=thread_local -D GOOGLE_GLOG_DLL_DECL= /D PTEX_STATIC /wd4800 /wd4244"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "PTEX_STATIC"
+				},
+				{
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/zlib"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/zlib"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Imath"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Half"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Iex"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/IlmImf"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/IlmBase/config"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/OpenEXR/config"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "E:/Project/pbrt-v3/src/ext/glog/src"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/glog"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "E:/Project/pbrt-v3/src/ext/ptex/src/ptex"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "zlibstatic::@73c077a40ae8d9707783"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "Ptex_static::@a7b58488bffeb11cd167"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "ext"
+	},
+	"id" : "ftest::@65d61c7e81293e0e5953",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "..\\ptex\\Ptex.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "..\\..\\..\\zlib\\zlibstatic.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "ftest",
+	"nameOnDisk" : "ftest.exe",
+	"paths" : 
+	{
+		"build" : "src/ext/ptex/src/tests",
+		"source" : "src/ext/ptex/src/tests"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/ptex/src/tests/ftest.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

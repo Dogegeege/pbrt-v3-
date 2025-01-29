@@ -1,0 +1,56 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/ext/ptex/src/utils/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"src/ext/ptex/src/utils/ptxinfo.exe"
+			],
+			"targetId" : "ptxinfo::@4c1562ba81c839dfd133",
+			"targetIndex" : 54,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "ptxinfo::@4c1562ba81c839dfd133",
+				"index" : 54
+			},
+			"destination" : "bin",
+			"type" : "cxxModuleBmi"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/ext/ptex/src/utils",
+		"source" : "src/ext/ptex/src/utils"
+	}
+}

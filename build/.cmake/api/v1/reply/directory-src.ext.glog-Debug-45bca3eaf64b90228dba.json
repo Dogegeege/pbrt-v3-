@@ -1,0 +1,101 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/ext/glog/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 547,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 589,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 594,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"src/ext/glog/glog.lib"
+			],
+			"targetId" : "glog::@d6e44c78f4c47f096089",
+			"targetIndex" : 46,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include/glog",
+			"paths" : 
+			[
+				"build/src/ext/glog/config.h",
+				"build/src/ext/glog/glog/logging.h",
+				"build/src/ext/glog/glog/raw_logging.h",
+				"build/src/ext/glog/glog/stl_logging.h",
+				"build/src/ext/glog/glog/vlog_is_on.h",
+				"src/ext/glog/src/glog/log_severity.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/glog",
+			"paths" : 
+			[
+				"build/src/ext/glog/CMakeFiles/glog-config.cmake",
+				"build/src/ext/glog/glog-config-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/glog",
+			"exportName" : "glog-targets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "glog::@d6e44c78f4c47f096089",
+					"index" : 46
+				}
+			],
+			"paths" : 
+			[
+				"src/ext/glog/CMakeFiles/Export/3b58dfe2d8c90c3a489d71c8991c4dd3/glog-targets.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/ext/glog",
+		"source" : "src/ext/glog"
+	}
+}

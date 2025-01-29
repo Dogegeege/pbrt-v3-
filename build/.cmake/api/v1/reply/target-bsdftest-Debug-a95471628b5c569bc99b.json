@@ -1,0 +1,332 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "bsdftest.exe"
+		},
+		{
+			"path" : "bsdftest.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_EXECUTABLE",
+			"INSTALL",
+			"TARGET_LINK_LIBRARIES",
+			"INCLUDE_DIRECTORIES"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"src/ext/openexr/OpenEXR/IlmImf/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 530,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 563,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 533,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 148,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 303,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 319,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 343,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 364,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 466,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 467,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /D _CRT_SECURE_NO_WARNINGS -D PBRT_HAVE_MEMORY_H -D PBRT_HAVE_HEX_FP_CONSTANTS -D PBRT_HAVE_BINARY_CONSTANTS -D PBRT_HAVE_CONSTEXPR -D PBRT_CONSTEXPR=constexpr -D PBRT_HAVE_ALIGNAS -D PBRT_HAVE_ALIGNOF -D PBRT_HAVE_NONPOD_IN_UNIONS -D PBRT_NOINLINE=__declspec(noinline) -D PBRT_HAVE__ALIGNED_MALLOC -D PBRT_THREAD_LOCAL=thread_local -D GOOGLE_GLOG_DLL_DECL= /D PTEX_STATIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "GLOG_NO_ABBREVIATED_SEVERITIES"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "GOOGLE_GLOG_DLL_DECL="
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "E:/Project/pbrt-v3/src/ext/zlib"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/zlib"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Imath"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Half"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Iex"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/IlmImf"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/IlmBase/config"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/OpenEXR/config"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/src/ext/glog/src"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/glog"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "E:/Project/pbrt-v3/src/ext/ptex/src/ptex"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "E:/Project/pbrt-v3/src"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "E:/Project/pbrt-v3/src/core"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/Project/pbrt-v3/src/ext/glog/src/windows"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "zlibstatic::@73c077a40ae8d9707783"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "pbrt::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "Iex::@0116349e0908dd0401d8"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "Half::@f1a5a8dbbb666411b166"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "Imath::@62dcb3202aa6ce1ea960"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "IlmThread::@c9e64c6c3428d436a6ce"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "IlmImf::@dfce845c588ce6a45822"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "glog::@d6e44c78f4c47f096089"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "Ptex_static::@a7b58488bffeb11cd167"
+		}
+	],
+	"id" : "bsdftest::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/PBRT-V3"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libpbrt.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "src\\ext\\openexr\\OpenEXR\\IlmImf\\IlmImf.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "src\\ext\\openexr\\IlmBase\\Imath\\Imath.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "src\\ext\\openexr\\IlmBase\\Half\\Half.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "src\\ext\\zlib\\zlibstatic.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "src\\ext\\glog\\glog.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "src\\ext\\ptex\\src\\ptex\\Ptex.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "src\\ext\\zlib\\zlibstatic.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "src\\ext\\openexr\\IlmBase\\IlmThread\\IlmThread.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "src\\ext\\openexr\\IlmBase\\Iex\\Iex.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "bsdftest",
+	"nameOnDisk" : "bsdftest.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/tools/bsdftest.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

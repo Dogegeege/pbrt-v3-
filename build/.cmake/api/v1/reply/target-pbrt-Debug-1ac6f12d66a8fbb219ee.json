@@ -1,0 +1,1980 @@
+{
+	"archive" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/machine:x64",
+				"role" : "flags"
+			}
+		]
+	},
+	"artifacts" : 
+	[
+		{
+			"path" : "libpbrt.lib"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_LIBRARY",
+			"INSTALL",
+			"INCLUDE_DIRECTORIES"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 486,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 573,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 303,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 319,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 343,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 364,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 466,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 467,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /D _CRT_SECURE_NO_WARNINGS -D PBRT_HAVE_MEMORY_H -D PBRT_HAVE_HEX_FP_CONSTANTS -D PBRT_HAVE_BINARY_CONSTANTS -D PBRT_HAVE_CONSTEXPR -D PBRT_CONSTEXPR=constexpr -D PBRT_HAVE_ALIGNAS -D PBRT_HAVE_ALIGNOF -D PBRT_HAVE_NONPOD_IN_UNIONS -D PBRT_NOINLINE=__declspec(noinline) -D PBRT_HAVE__ALIGNED_MALLOC -D PBRT_THREAD_LOCAL=thread_local -D GOOGLE_GLOG_DLL_DECL= /D PTEX_STATIC"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "E:/Project/pbrt-v3/src/ext/zlib"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/zlib"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Imath"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Half"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Iex"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/IlmImf"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/IlmBase/config"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/OpenEXR/config"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/src/ext/glog/src"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/glog"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "E:/Project/pbrt-v3/src/ext/ptex/src/ptex"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/src/core"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				77,
+				79,
+				81,
+				83,
+				85,
+				87,
+				95,
+				99,
+				101,
+				104,
+				106,
+				108,
+				110,
+				112,
+				114,
+				116,
+				118,
+				120,
+				122,
+				124,
+				126,
+				128,
+				130,
+				132,
+				134,
+				136,
+				138,
+				140,
+				142,
+				144,
+				146,
+				148,
+				150,
+				152,
+				154,
+				156,
+				158,
+				160,
+				162,
+				164,
+				166,
+				168,
+				170,
+				172,
+				174,
+				176,
+				178,
+				180,
+				182,
+				184,
+				186,
+				188,
+				190,
+				192,
+				194,
+				196,
+				198,
+				200,
+				202,
+				204,
+				206,
+				208,
+				210,
+				212,
+				214,
+				216,
+				218,
+				220,
+				222,
+				224,
+				226,
+				228,
+				230,
+				232,
+				234,
+				236
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /D _CRT_SECURE_NO_WARNINGS -D PBRT_HAVE_MEMORY_H -D PBRT_HAVE_HEX_FP_CONSTANTS -D PBRT_HAVE_BINARY_CONSTANTS -D PBRT_HAVE_CONSTEXPR -D PBRT_CONSTEXPR=constexpr -D PBRT_HAVE_ALIGNAS -D PBRT_HAVE_ALIGNOF -D PBRT_HAVE_NONPOD_IN_UNIONS -D PBRT_NOINLINE=__declspec(noinline) -D PBRT_HAVE__ALIGNED_MALLOC -D PBRT_THREAD_LOCAL=thread_local -D GOOGLE_GLOG_DLL_DECL= /D PTEX_STATIC"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "E:/Project/pbrt-v3/src/ext/zlib"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/zlib"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Imath"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Half"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Iex"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/IlmImf"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/IlmBase/config"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/OpenEXR/config"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/src/ext/glog/src"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/glog"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "E:/Project/pbrt-v3/src/ext/ptex/src/ptex"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/src/core"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				89
+			]
+		}
+	],
+	"id" : "pbrt::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/PBRT-V3"
+		}
+	},
+	"name" : "pbrt",
+	"nameOnDisk" : "libpbrt.lib",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "core",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76
+			]
+		},
+		{
+			"name" : "accelerators",
+			"sourceIndexes" : 
+			[
+				77,
+				78,
+				79,
+				80
+			]
+		},
+		{
+			"name" : "cameras",
+			"sourceIndexes" : 
+			[
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88
+			]
+		},
+		{
+			"name" : "ext",
+			"sourceIndexes" : 
+			[
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103
+			]
+		},
+		{
+			"name" : "filters",
+			"sourceIndexes" : 
+			[
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113
+			]
+		},
+		{
+			"name" : "integrators",
+			"sourceIndexes" : 
+			[
+				114,
+				115,
+				116,
+				117,
+				118,
+				119,
+				120,
+				121,
+				122,
+				123,
+				124,
+				125,
+				126,
+				127,
+				128,
+				129
+			]
+		},
+		{
+			"name" : "lights",
+			"sourceIndexes" : 
+			[
+				130,
+				131,
+				132,
+				133,
+				134,
+				135,
+				136,
+				137,
+				138,
+				139,
+				140,
+				141,
+				142,
+				143
+			]
+		},
+		{
+			"name" : "materials",
+			"sourceIndexes" : 
+			[
+				144,
+				145,
+				146,
+				147,
+				148,
+				149,
+				150,
+				151,
+				152,
+				153,
+				154,
+				155,
+				156,
+				157,
+				158,
+				159,
+				160,
+				161,
+				162,
+				163,
+				164,
+				165,
+				166,
+				167,
+				168,
+				169,
+				170,
+				171
+			]
+		},
+		{
+			"name" : "media",
+			"sourceIndexes" : 
+			[
+				172,
+				173,
+				174,
+				175
+			]
+		},
+		{
+			"name" : "samplers",
+			"sourceIndexes" : 
+			[
+				176,
+				177,
+				178,
+				179,
+				180,
+				181,
+				182,
+				183,
+				184,
+				185,
+				186,
+				187
+			]
+		},
+		{
+			"name" : "shapes",
+			"sourceIndexes" : 
+			[
+				188,
+				189,
+				190,
+				191,
+				192,
+				193,
+				194,
+				195,
+				196,
+				197,
+				198,
+				199,
+				200,
+				201,
+				202,
+				203,
+				204,
+				205,
+				206,
+				207,
+				208,
+				209,
+				210,
+				211
+			]
+		},
+		{
+			"name" : "textures",
+			"sourceIndexes" : 
+			[
+				212,
+				213,
+				214,
+				215,
+				216,
+				217,
+				218,
+				219,
+				220,
+				221,
+				222,
+				223,
+				224,
+				225,
+				226,
+				227,
+				228,
+				229,
+				230,
+				231,
+				232,
+				233,
+				234,
+				235,
+				236,
+				237
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/api.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/bssrdf.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/camera.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/efloat.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/error.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/fileutil.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/film.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/filter.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/floatfile.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/geometry.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/imageio.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/integrator.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/interaction.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/interpolation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/light.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/lightdistrib.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/lowdiscrepancy.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/material.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/medium.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/memory.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/microfacet.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/parallel.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/paramset.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/parser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/primitive.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/progressreporter.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/quaternion.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/reflection.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/sampler.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/sampling.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/scene.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/shape.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/sobolmatrices.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/spectrum.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/stats.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/texture.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/transform.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/api.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/bssrdf.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/camera.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/efloat.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/error.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/fileutil.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/film.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/filter.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/floatfile.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/geometry.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/imageio.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/integrator.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/interaction.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/interpolation.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/light.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/lowdiscrepancy.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/material.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/medium.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/memory.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/microfacet.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/mipmap.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/parallel.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/paramset.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/parser.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/pbrt.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/primitive.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/progressreporter.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/quaternion.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/reflection.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/rng.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/sampler.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/sampling.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/scene.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/shape.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/sobolmatrices.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/spectrum.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/stats.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/stringprint.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/texture.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/transform.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/accelerators/bvh.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/accelerators/bvh.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/accelerators/kdtreeaccel.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/accelerators/kdtreeaccel.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/cameras/environment.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/cameras/environment.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/cameras/orthographic.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/cameras/orthographic.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/cameras/perspective.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/cameras/perspective.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/cameras/realistic.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/cameras/realistic.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/ext/ArHosekSkyModel.c",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/ArHosekSkyModel.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/ArHosekSkyModelData_CIEXYZ.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/ArHosekSkyModelData_RGB.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/ArHosekSkyModelData_Spectral.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/glog",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/lodepng.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/lodepng.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/openexr",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/ptex",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/rply.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/rply.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/targa.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/targa.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ext/zlib",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/filters/box.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/filters/box.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/filters/gaussian.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/filters/gaussian.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/filters/mitchell.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/filters/mitchell.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/filters/sinc.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/filters/sinc.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/filters/triangle.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/filters/triangle.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/integrators/ao.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/integrators/ao.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/integrators/bdpt.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/integrators/bdpt.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/integrators/directlighting.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/integrators/directlighting.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/integrators/mlt.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/integrators/mlt.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/integrators/path.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/integrators/path.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/integrators/sppm.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/integrators/sppm.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/integrators/volpath.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/integrators/volpath.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/integrators/whitted.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/integrators/whitted.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/lights/diffuse.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/lights/diffuse.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/lights/distant.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/lights/distant.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/lights/goniometric.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/lights/goniometric.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/lights/infinite.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/lights/infinite.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/lights/point.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/lights/point.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/lights/projection.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/lights/projection.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/lights/spot.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/lights/spot.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/disney.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/disney.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/fourier.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/fourier.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/glass.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/glass.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/hair.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/hair.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/kdsubsurface.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/kdsubsurface.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/matte.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/matte.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/metal.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/metal.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/mirror.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/mirror.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/mixmat.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/mixmat.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/plastic.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/plastic.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/substrate.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/substrate.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/subsurface.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/subsurface.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/translucent.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/translucent.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/materials/uber.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/materials/uber.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/media/grid.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/media/grid.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/media/homogeneous.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/media/homogeneous.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/samplers/halton.cpp",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/samplers/halton.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/samplers/maxmin.cpp",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/samplers/maxmin.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/samplers/random.cpp",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/samplers/random.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/samplers/sobol.cpp",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/samplers/sobol.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/samplers/stratified.cpp",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/samplers/stratified.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/samplers/zerotwosequence.cpp",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/samplers/zerotwosequence.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/cone.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/cone.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/curve.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/curve.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/cylinder.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/cylinder.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/disk.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/disk.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/heightfield.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/heightfield.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/hyperboloid.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/hyperboloid.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/loopsubdiv.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/loopsubdiv.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/nurbs.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/nurbs.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/paraboloid.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/paraboloid.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/plymesh.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/plymesh.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/sphere.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/sphere.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shapes/triangle.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/shapes/triangle.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/bilerp.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/bilerp.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/checkerboard.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/checkerboard.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/constant.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/constant.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/dots.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/dots.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/fbm.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/fbm.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/imagemap.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/imagemap.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/marble.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/marble.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/mix.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/mix.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/ptex.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/ptex.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/scale.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/scale.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/uv.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/uv.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/windy.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/windy.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/textures/wrinkled.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/textures/wrinkled.h",
+			"sourceGroupIndex" : 11
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

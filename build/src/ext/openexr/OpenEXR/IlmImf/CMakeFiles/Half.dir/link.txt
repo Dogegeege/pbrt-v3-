@@ -1,0 +1,1 @@
+C:\PROGRA~1\MICROS~2\2022\COMMUN~1\VC\Tools\MSVC\1434~1.319\bin\Hostx64\x64\lib.exe /nologo /machine:x64 /out:Half.lib @CMakeFiles\Half.dir\objects1.rsp

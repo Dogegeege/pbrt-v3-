@@ -1,0 +1,253 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/ext/ptex/src/utils/ptxinfo.exe"
+		},
+		{
+			"path" : "src/ext/ptex/src/utils/ptxinfo.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"install",
+			"target_link_libraries",
+			"add_definitions",
+			"INCLUDE_DIRECTORIES",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"src/ext/ptex/src/utils/CMakeLists.txt",
+			"CMakeLists.txt",
+			"src/ext/ptex/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 303,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 319,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 343,
+				"parent" : 5
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 47,
+				"parent" : 9
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /D _CRT_SECURE_NO_WARNINGS -D PBRT_HAVE_MEMORY_H -D PBRT_HAVE_HEX_FP_CONSTANTS -D PBRT_HAVE_BINARY_CONSTANTS -D PBRT_HAVE_CONSTEXPR -D PBRT_CONSTEXPR=constexpr -D PBRT_HAVE_ALIGNAS -D PBRT_HAVE_ALIGNOF -D PBRT_HAVE_NONPOD_IN_UNIONS -D PBRT_NOINLINE=__declspec(noinline) -D PBRT_HAVE__ALIGNED_MALLOC -D PBRT_THREAD_LOCAL=thread_local -D GOOGLE_GLOG_DLL_DECL= /D PTEX_STATIC /wd4800 /wd4244"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "PTEX_STATIC"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "PTEX_VER=\" ()\""
+				},
+				{
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "E:/Project/pbrt-v3/src/ext/zlib"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/zlib"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Imath"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Half"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/IlmBase/Iex"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/src/ext/openexr/OpenEXR/IlmImf"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/IlmBase/config"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/openexr/OpenEXR/config"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/src/ext/glog/src"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/Project/pbrt-v3/build/src/ext/glog"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "E:/Project/pbrt-v3/src/ext/ptex/src/ptex"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "zlibstatic::@73c077a40ae8d9707783"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "Ptex_static::@a7b58488bffeb11cd167"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "ext"
+	},
+	"id" : "ptxinfo::@4c1562ba81c839dfd133",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/PBRT-V3"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "..\\ptex\\Ptex.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "..\\..\\..\\zlib\\zlibstatic.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "ptxinfo",
+	"nameOnDisk" : "ptxinfo.exe",
+	"paths" : 
+	{
+		"build" : "src/ext/ptex/src/utils",
+		"source" : "src/ext/ptex/src/utils"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/ptex/src/utils/ptxinfo.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

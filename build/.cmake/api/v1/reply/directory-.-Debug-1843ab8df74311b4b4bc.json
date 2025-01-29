@@ -1,0 +1,177 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 563,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 573,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"pbrt.exe"
+			],
+			"targetId" : "pbrt_exe::@6890427a1f51a3e7e1df",
+			"targetIndex" : 52,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "pbrt_exe::@6890427a1f51a3e7e1df",
+				"index" : 52
+			},
+			"destination" : "bin",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"bsdftest.exe"
+			],
+			"targetId" : "bsdftest::@6890427a1f51a3e7e1df",
+			"targetIndex" : 38,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "bsdftest::@6890427a1f51a3e7e1df",
+				"index" : 38
+			},
+			"destination" : "bin",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"imgtool.exe"
+			],
+			"targetId" : "imgtool::@6890427a1f51a3e7e1df",
+			"targetIndex" : 48,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "imgtool::@6890427a1f51a3e7e1df",
+				"index" : 48
+			},
+			"destination" : "bin",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"obj2pbrt.exe"
+			],
+			"targetId" : "obj2pbrt::@6890427a1f51a3e7e1df",
+			"targetIndex" : 50,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "obj2pbrt::@6890427a1f51a3e7e1df",
+				"index" : 50
+			},
+			"destination" : "bin",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"cyhair2pbrt.exe"
+			],
+			"targetId" : "cyhair2pbrt::@6890427a1f51a3e7e1df",
+			"targetIndex" : 39,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "cyhair2pbrt::@6890427a1f51a3e7e1df",
+				"index" : 39
+			},
+			"destination" : "bin",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"libpbrt.lib"
+			],
+			"targetId" : "pbrt::@6890427a1f51a3e7e1df",
+			"targetIndex" : 51,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "pbrt::@6890427a1f51a3e7e1df",
+				"index" : 51
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}

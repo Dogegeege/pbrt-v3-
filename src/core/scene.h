@@ -39,44 +39,44 @@
 #define PBRT_CORE_SCENE_H
 
 // core/scene.h*
-#include "pbrt.h"
 #include "geometry.h"
-#include "primitive.h"
 #include "light.h"
+#include "pbrt.h"
+#include "primitive.h"
 
 namespace pbrt {
 
 // Scene Declarations
 class Scene {
-  public:
+   public:
     // Scene Public Methods
-    Scene(std::shared_ptr<Primitive> aggregate,
-          const std::vector<std::shared_ptr<Light>> &lights)
+
+    Scene(std::shared_ptr<Primitive> aggregate, const std::vector<std::shared_ptr<Light>>& lights)
         : lights(lights), aggregate(aggregate) {
         // Scene Constructor Implementation
         worldBound = aggregate->WorldBound();
-        for (const auto &light : lights) {
-            light->Preprocess(*this);
-            if (light->flags & (int)LightFlags::Infinite)
-                infiniteLights.push_back(light);
+        for (const auto& light : lights) {
+            light->Preprocess(*this);  // 光线预处理
+            if (light->flags & (int)LightFlags::Infinite) infiniteLights.push_back(light);
         }
     }
-    const Bounds3f &WorldBound() const { return worldBound; }
-    bool Intersect(const Ray &ray, SurfaceInteraction *isect) const;
-    bool IntersectP(const Ray &ray) const;
-    bool IntersectTr(Ray ray, Sampler &sampler, SurfaceInteraction *isect,
-                     Spectrum *transmittance) const;
+    const Bounds3f& WorldBound() const { return worldBound; }
+    bool            Intersect(const Ray& ray, SurfaceInteraction* isect) const;
+    bool            IntersectP(const Ray& ray) const;
+    bool            IntersectTr(Ray ray, Sampler& sampler, SurfaceInteraction* isect, Spectrum* transmittance) const;
 
     // Scene Public Data
-    std::vector<std::shared_ptr<Light>> lights;
+
+    std::vector<std::shared_ptr<Light>> lights;  // 光源列表
     // Store infinite light sources separately for cases where we only want
     // to loop over them.
     std::vector<std::shared_ptr<Light>> infiniteLights;
 
-  private:
+   private:
     // Scene Private Data
+
     std::shared_ptr<Primitive> aggregate;
-    Bounds3f worldBound;
+    Bounds3f                   worldBound;  // 场景包围盒
 };
 
 }  // namespace pbrt

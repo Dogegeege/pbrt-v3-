@@ -1,0 +1,43 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"src/ext/openexr/OpenEXR/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 236,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files (x86)/PBRT-V3/include/OpenEXR",
+			"paths" : 
+			[
+				"build/src/ext/openexr/OpenEXR/config/OpenEXRConfig.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/ext/openexr/OpenEXR",
+		"source" : "src/ext/openexr/OpenEXR"
+	}
+}
