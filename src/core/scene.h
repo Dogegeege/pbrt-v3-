@@ -51,8 +51,7 @@ class Scene {
    public:
     // Scene Public Methods
 
-    Scene(std::shared_ptr<Primitive> aggregate, const std::vector<std::shared_ptr<Light>>& lights)
-        : lights(lights), aggregate(aggregate) {
+    Scene(std::shared_ptr<Primitive> aggregate, const std::vector<std::shared_ptr<Light>>& lights) : lights(lights), aggregate(aggregate) {
         // Scene Constructor Implementation
         worldBound = aggregate->WorldBound();
         for (const auto& light : lights) {
@@ -75,7 +74,7 @@ class Scene {
    private:
     // Scene Private Data
 
-    std::shared_ptr<Primitive> aggregate;
+    std::shared_ptr<Primitive> aggregate;   // 聚合体（场景中的几何对象）
     Bounds3f                   worldBound;  // 场景包围盒
 };
 

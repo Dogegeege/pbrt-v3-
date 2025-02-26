@@ -49,7 +49,7 @@ bool Scene::Intersect(const Ray& ray, SurfaceInteraction* isect) const {
 /**
  * @brief 只判断光线与场景中的物体是否相交，而不包含其它信息。
  * @param ray 光线
- * @return true
+ * @return bool
  */
 bool Scene::IntersectP(const Ray& ray) const {
     ++nShadowTests;

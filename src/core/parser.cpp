@@ -83,8 +83,7 @@ static char decodeEscaped(int ch) {
     return 0;  // NOTREACHED
 }
 
-std::unique_ptr<Tokenizer> Tokenizer::CreateFromFile(const std::string&               filename,
-                                                     std::function<void(const char*)> errorCallback) {
+std::unique_ptr<Tokenizer> Tokenizer::CreateFromFile(const std::string& filename, std::function<void(const char*)> errorCallback) {
     if (filename == "-") {
         // Handle stdin by slurping everything into a string.
         std::string str;
@@ -119,9 +118,8 @@ std::unique_ptr<Tokenizer> Tokenizer::CreateFromFile(const std::string&         
 #elif defined(PBRT_IS_WINDOWS)
     auto errorReportLambda = [&errorCallback, &filename]() -> std::unique_ptr<Tokenizer> {
         LPSTR messageBuffer = nullptr;
-        FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
-                       NULL, ::GetLastError(), MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&messageBuffer, 0,
-                       NULL);
+        FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, NULL, ::GetLastError(),
+                       MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&messageBuffer, 0, NULL);
 
         errorCallback(StringPrintf("%s: %s", filename.c_str(), messageBuffer).c_str());
 
@@ -129,8 +127,7 @@ std::unique_ptr<Tokenizer> Tokenizer::CreateFromFile(const std::string&         
         return nullptr;
     };
 
-    HANDLE fileHandle =
-        CreateFileA(filename.c_str(), GENERIC_READ, FILE_SHARE_READ, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
+    HANDLE fileHandle = CreateFileA(filename.c_str(), GENERIC_READ, FILE_SHARE_READ, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
     if (!fileHandle) { return errorReportLambda(); }
 
     LARGE_INTEGER liLen;
@@ -163,8 +160,7 @@ std::unique_ptr<Tokenizer> Tokenizer::CreateFromFile(const std::string&         
 #endif
 }
 
-std::unique_ptr<Tokenizer> Tokenizer::CreateFromString(std::string                      str,
-                                                       std::function<void(const char*)> errorCallback) {
+std::unique_ptr<Tokenizer> Tokenizer::CreateFromString(std::string str, std::function<void(const char*)> errorCallback) {
     // return std::make_unique<Tokenizer>(std::move(str));
     return std::unique_ptr<Tokenizer>(new Tokenizer(std::move(str), std::move(errorCallback)));
 }
@@ -192,9 +188,8 @@ Tokenizer::~Tokenizer() {
     if (unmapPtr) {
         if (UnmapViewOfFile(unmapPtr) == 0) {
             LPSTR messageBuffer = nullptr;
-            FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
-                           NULL, ::GetLastError(), MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&messageBuffer, 0,
-                           NULL);
+            FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, NULL, ::GetLastError(),
+                           MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&messageBuffer, 0, NULL);
             errorCallback(StringPrintf("UnmapViewOfFile: %s", messageBuffer).c_str());
             LocalFree(messageBuffer);
         }
@@ -765,8 +760,7 @@ static void parse(std::unique_ptr<Tokenizer> t) {
 
     // Helper function for pbrt API entrypoints that take a single string
     // parameter and a ParamSet (e.g. pbrtShape()).
-    auto basicParamListEntrypoint = [&](SpectrumType                                          spectrumType,
-                                        std::function<void(const std::string& n, ParamSet p)> apiFunc) {
+    auto basicParamListEntrypoint = [&](SpectrumType spectrumType, std::function<void(const std::string& n, ParamSet p)> apiFunc) {
         string_view token    = nextToken(TokenRequired);
         string_view dequoted = dequoteString(token);
         std::string n        = toString(dequoted);
@@ -974,9 +968,7 @@ static void parse(std::unique_ptr<Tokenizer> t) {
                     std::string type = toString(n);
 
                     basicParamListEntrypoint(SpectrumType::Reflectance,
-                                             [&](const std::string& texName, const ParamSet& params) {
-                                                 pbrtTexture(name, type, texName, params);
-                                             });
+                                             [&](const std::string& texName, const ParamSet& params) { pbrtTexture(name, type, texName, params); });
                 } else
                     syntaxError(tok);
                 break;

@@ -444,8 +444,8 @@ CMakeFiles/pbrt.dir/clean:
 # Target rules for target CMakeFiles/pbrt_exe.dir
 
 # All Build rule for target.
-CMakeFiles/pbrt_exe.dir/all: src/ext/zlib/CMakeFiles/zlibstatic.dir/all
 CMakeFiles/pbrt_exe.dir/all: CMakeFiles/pbrt.dir/all
+CMakeFiles/pbrt_exe.dir/all: src/ext/zlib/CMakeFiles/zlibstatic.dir/all
 CMakeFiles/pbrt_exe.dir/all: src/ext/openexr/IlmBase/Iex/CMakeFiles/Iex.dir/all
 CMakeFiles/pbrt_exe.dir/all: src/ext/openexr/IlmBase/Half/CMakeFiles/Half.dir/all
 CMakeFiles/pbrt_exe.dir/all: src/ext/openexr/IlmBase/Imath/CMakeFiles/Imath.dir/all
@@ -478,8 +478,8 @@ CMakeFiles/pbrt_exe.dir/clean:
 # Target rules for target CMakeFiles/bsdftest.dir
 
 # All Build rule for target.
-CMakeFiles/bsdftest.dir/all: src/ext/zlib/CMakeFiles/zlibstatic.dir/all
 CMakeFiles/bsdftest.dir/all: CMakeFiles/pbrt.dir/all
+CMakeFiles/bsdftest.dir/all: src/ext/zlib/CMakeFiles/zlibstatic.dir/all
 CMakeFiles/bsdftest.dir/all: src/ext/openexr/IlmBase/Iex/CMakeFiles/Iex.dir/all
 CMakeFiles/bsdftest.dir/all: src/ext/openexr/IlmBase/Half/CMakeFiles/Half.dir/all
 CMakeFiles/bsdftest.dir/all: src/ext/openexr/IlmBase/Imath/CMakeFiles/Imath.dir/all
@@ -512,8 +512,8 @@ CMakeFiles/bsdftest.dir/clean:
 # Target rules for target CMakeFiles/imgtool.dir
 
 # All Build rule for target.
-CMakeFiles/imgtool.dir/all: src/ext/zlib/CMakeFiles/zlibstatic.dir/all
 CMakeFiles/imgtool.dir/all: CMakeFiles/pbrt.dir/all
+CMakeFiles/imgtool.dir/all: src/ext/zlib/CMakeFiles/zlibstatic.dir/all
 CMakeFiles/imgtool.dir/all: src/ext/openexr/IlmBase/Iex/CMakeFiles/Iex.dir/all
 CMakeFiles/imgtool.dir/all: src/ext/openexr/IlmBase/Half/CMakeFiles/Half.dir/all
 CMakeFiles/imgtool.dir/all: src/ext/openexr/IlmBase/Imath/CMakeFiles/Imath.dir/all
@@ -598,8 +598,8 @@ CMakeFiles/cyhair2pbrt.dir/clean:
 # Target rules for target CMakeFiles/pbrt_test.dir
 
 # All Build rule for target.
-CMakeFiles/pbrt_test.dir/all: src/ext/zlib/CMakeFiles/zlibstatic.dir/all
 CMakeFiles/pbrt_test.dir/all: CMakeFiles/pbrt.dir/all
+CMakeFiles/pbrt_test.dir/all: src/ext/zlib/CMakeFiles/zlibstatic.dir/all
 CMakeFiles/pbrt_test.dir/all: src/ext/openexr/IlmBase/Iex/CMakeFiles/Iex.dir/all
 CMakeFiles/pbrt_test.dir/all: src/ext/openexr/IlmBase/Half/CMakeFiles/Half.dir/all
 CMakeFiles/pbrt_test.dir/all: src/ext/openexr/IlmBase/Imath/CMakeFiles/Imath.dir/all
@@ -960,8 +960,8 @@ src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf.dir/all: src/ext/openexr/IlmBas
 src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf.dir/all: src/ext/openexr/IlmBase/Imath/CMakeFiles/Imath.dir/all
 src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf.dir/all: src/ext/openexr/IlmBase/IlmThread/CMakeFiles/IlmThread.dir/all
 src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf.dir/all: src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/b44ExpLogTable.dir/all
-src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf.dir/all: src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/dwaLookups.dir/all
 src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf.dir/all: src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf-obj.dir/all
+src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf.dir/all: src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/dwaLookups.dir/all
 	$(MAKE) $(MAKESILENT) -f src\ext\openexr\OpenEXR\IlmImf\CMakeFiles\IlmImf.dir\build.make src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\ext\openexr\OpenEXR\IlmImf\CMakeFiles\IlmImf.dir\build.make src/ext/openexr/OpenEXR/IlmImf/CMakeFiles/IlmImf.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=E:\Project\pbrt-v3\build\CMakeFiles --progress-num=4 "Built target IlmImf"

@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bsdftest.exe"
+			"path" : "imgtool.exe"
 		},
 		{
-			"path" : "bsdftest.pdb"
+			"path" : "imgtool.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -31,7 +31,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 530,
+				"line" : 535,
 				"parent" : 0
 			},
 			{
@@ -43,7 +43,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 533,
+				"line" : 538,
 				"parent" : 0
 			},
 			{
@@ -183,11 +183,11 @@
 	[
 		{
 			"backtrace" : 3,
-			"id" : "zlibstatic::@73c077a40ae8d9707783"
+			"id" : "pbrt::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 3,
-			"id" : "pbrt::@6890427a1f51a3e7e1df"
+			"id" : "zlibstatic::@73c077a40ae8d9707783"
 		},
 		{
 			"backtrace" : 3,
@@ -218,7 +218,7 @@
 			"id" : "Ptex_static::@a7b58488bffeb11cd167"
 		}
 	],
-	"id" : "bsdftest::@6890427a1f51a3e7e1df",
+	"id" : "imgtool::@6890427a1f51a3e7e1df",
 	"install" : 
 	{
 		"destinations" : 
@@ -302,8 +302,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "bsdftest",
-	"nameOnDisk" : "bsdftest.exe",
+	"name" : "imgtool",
+	"nameOnDisk" : "imgtool.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -324,7 +324,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/tools/bsdftest.cpp",
+			"path" : "src/tools/imgtool.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

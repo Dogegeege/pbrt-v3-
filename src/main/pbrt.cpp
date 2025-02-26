@@ -77,6 +77,14 @@ int main(int argc, char* argv[]) {
 
     std::cout << argc << " " << argv[0] << std::endl;
 
+    Point2i  p(1, 2);
+    Vector2i v(1, 2);
+
+    Point2f pf = static_cast<Point2f>(p);
+    Point2f pf = static_cast<Point2f>(v);
+
+    Vector2i vi = static_cast<Vector2i>(p);
+
     Options                  options;
     std::vector<std::string> filenames;
     // Process command-line arguments

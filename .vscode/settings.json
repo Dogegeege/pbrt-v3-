@@ -1,6 +1,10 @@
 {
   "cmake.debugConfig": {
-    "args": ["--help"]
+    "args": [
+      "--nthreads",
+      "24",
+      "E:\\Project\\pbrt-v3\\scenes\\killeroo-simple.pbrt"
+    ]
   },
   "files.associations": {
     "algorithm": "cpp",
@@ -75,6 +79,12 @@
     "xstring": "cpp",
     "xtr1common": "cpp",
     "xtree": "cpp",
-    "xutility": "cpp"
+    "xutility": "cpp",
+    "complex": "cpp",
+    "fstream": "cpp",
+    "numeric": "cpp",
+    "queue": "cpp",
+    "ranges": "cpp",
+    "span": "cpp"
   }
 }
