@@ -239,17 +239,23 @@ Transform Rotate(Float theta, const Vector3f& axis) {
     return Transform(m, Transpose(m));
 }
 
+/**
+ * @brief 注视变换（视图变换）旋转+平移
+ * @param pos 摄像机位置
+ * @param look 注视方向
+ * @param up   世界坐标正上方向
+ */
 Transform LookAt(const Point3f& pos, const Point3f& look, const Vector3f& up) {
     Matrix4x4 cameraToWorld;
-    // Initialize fourth column of viewing matrix
+    // 平移
     cameraToWorld.m[0][3] = pos.x;
     cameraToWorld.m[1][3] = pos.y;
     cameraToWorld.m[2][3] = pos.z;
     cameraToWorld.m[3][3] = 1;
 
-    // Initialize first three columns of viewing matrix
+    // 旋转
     Vector3f dir = Normalize(look - pos);
-    if (Cross(Normalize(up), dir).Length() == 0) {
+    if (Cross(Normalize(up), dir).Length() == 0) {  // up和dir平行
         Error(
             "\"up\" vector (%f, %f, %f) and viewing direction (%f, %f, %f) "
             "passed to LookAt are pointing in the same direction.  Using "
@@ -274,9 +280,15 @@ Transform LookAt(const Point3f& pos, const Point3f& look, const Vector3f& up) {
     return Transform(Inverse(cameraToWorld), cameraToWorld);
 }
 
+/**
+ * @brief 变换作用于包围盒（八个顶点）
+ * @param r 原始包围盒
+ * @return 变换后的包围盒
+ */
 Bounds3f Transform::operator()(const Bounds3f& b) const {
     const Transform& M = *this;
     Bounds3f         ret(M(Point3f(b.pMin.x, b.pMin.y, b.pMin.z)));
+
     ret = Union(ret, M(Point3f(b.pMax.x, b.pMin.y, b.pMin.z)));
     ret = Union(ret, M(Point3f(b.pMin.x, b.pMax.y, b.pMin.z)));
     ret = Union(ret, M(Point3f(b.pMin.x, b.pMin.y, b.pMax.z)));
@@ -291,6 +303,10 @@ Transform Transform::operator*(const Transform& t2) const {
     return Transform(Matrix4x4::Mul(m, t2.m), Matrix4x4::Mul(t2.mInv, mInv));
 }
 
+/**
+ * @brief 判断变换是否改变了坐标系的左右手性，若变换矩阵行列式小于0则改变坐标系左右手性
+ * @return `true` 表示变换改变了坐标系左右手性
+ */
 bool Transform::SwapsHandedness() const {
     Float det = m.m[0][0] * (m.m[1][1] * m.m[2][2] - m.m[1][2] * m.m[2][1]) - m.m[0][1] * (m.m[1][0] * m.m[2][2] - m.m[1][2] * m.m[2][0]) +
                 m.m[0][2] * (m.m[1][0] * m.m[2][1] - m.m[1][1] * m.m[2][0]);

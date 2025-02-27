@@ -1,6 +1,9 @@
 pbrt, Version 3
 ===============
 
+
+### This version is Detailed Explanation for CHINESE 
+### 中文注释版，该分支暂未完善（同步了一堆无用文件，请自行删除）
 [![Build Status](https://travis-ci.org/mmp/pbrt-v3.svg?branch=master)](https://travis-ci.org/mmp/pbrt-v3)
 [![Build status](https://ci.appveyor.com/api/projects/status/mlm9g91ejxlcn67s/branch/master?svg=true)](https://ci.appveyor.com/project/mmp/pbrt-v3/branch/master)
 

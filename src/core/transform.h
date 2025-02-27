@@ -46,7 +46,10 @@
 
 namespace pbrt {
 
-// Matrix4x4 Declarations
+/**
+ * @brief 浮点型4x4矩阵
+ * @param m[4][4] 矩阵数组
+ */
 struct Matrix4x4 {
     // Matrix4x4 Public Methods
     Matrix4x4() {
@@ -121,7 +124,11 @@ struct Matrix4x4 {
     Float m[4][4];
 };
 
-// Transform Declarations
+/**
+ * @brief 变换
+ * @param m 变换矩阵
+ * @param mInv 变换矩阵的逆矩阵
+ */
 class Transform {
    public:
     // Transform Public Methods
@@ -213,6 +220,11 @@ Transform Perspective(Float fov, Float znear, Float zfar);
 bool      SolveLinearSystem2x2(const Float A[2][2], const Float B[2], Float* x0, Float* x1);
 
 // Transform Inline Functions
+/**
+ * @brief 变换作用于坐标
+ * @param p 原始坐标
+ * @return 变换后的坐标
+ */
 template <typename T>
 inline Point3<T> Transform::operator()(const Point3<T>& p) const {
     T x = p.x, y = p.y, z = p.z;
@@ -227,6 +239,11 @@ inline Point3<T> Transform::operator()(const Point3<T>& p) const {
         return Point3<T>(xp, yp, zp) / wp;
 }
 
+/**
+ * @brief 变换作用于向量（默认齐次坐标`w = 0`，丢弃平移参数）
+ * @param v 原始向量
+ * @return 变换后的向量
+ */
 template <typename T>
 inline Vector3<T> Transform::operator()(const Vector3<T>& v) const {
     T x = v.x, y = v.y, z = v.z;
@@ -234,6 +251,11 @@ inline Vector3<T> Transform::operator()(const Vector3<T>& v) const {
                       m.m[2][0] * x + m.m[2][1] * y + m.m[2][2] * z);
 }
 
+/**
+ * @brief 变换作用于法线（默认齐次坐标`w = 0`，丢弃平移参数）。为保持与切平面的垂直，法线变换与向量,坐标的变换不同（需要取逆再转置）
+ * @param n 原始法线
+ * @return 变换后的法线
+ */
 template <typename T>
 inline Normal3<T> Transform::operator()(const Normal3<T>& n) const {
     T x = n.x, y = n.y, z = n.z;
@@ -241,7 +263,13 @@ inline Normal3<T> Transform::operator()(const Normal3<T>& n) const {
                       mInv.m[0][2] * x + mInv.m[1][2] * y + mInv.m[2][2] * z);
 }
 
+/**
+ * @brief 变换作用于射线
+ * @param r 原始射线
+ * @return 变换后的射线
+ */
 inline Ray Transform::operator()(const Ray& r) const {
+    // 对坐标，射线的变换调用其它仿函数即可
     Vector3f oError;
     Point3f  o             = (*this)(r.o, &oError);
     Vector3f d             = (*this)(r.d);
@@ -256,6 +284,11 @@ inline Ray Transform::operator()(const Ray& r) const {
     return Ray(o, d, tMax, r.time, r.medium);
 }
 
+/**
+ * @brief 变换作用于差分射线
+ * @param r 原始差分射线
+ * @return 变换后的差分射线
+ */
 inline RayDifferential Transform::operator()(const RayDifferential& r) const {
     Ray             tr = (*this)(Ray(r));
     RayDifferential ret(tr.o, tr.d, tr.tMax, tr.time, tr.medium);
