@@ -31,25 +31,41 @@
  */
 
 #if defined(_MSC_VER)
-#define NOMINMAX
-#pragma once
+    #define NOMINMAX
+    #pragma once
 #endif
 
 #ifndef PBRT_SHAPES_SPHERE_H
-#define PBRT_SHAPES_SPHERE_H
+    #define PBRT_SHAPES_SPHERE_H
 
-// shapes/sphere.h*
-#include "shape.h"
+    // shapes/sphere.h*
+    #include "shape.h"
 
 namespace pbrt {
 
-// Sphere Declarations
+/**
+ * @brief 球类，基于球坐标系`(r,theta,phi)`参数化描述
+ * @param ObjectToWorld 物体坐标系到世界坐标系的变换
+ * @param WorldToObject 世界坐标系到物体坐标系的变换(`ObjectToWorld`的逆变换)
+ * @param reverseOrientation 曲面法线方向是否反向
+ * @param radius 球半径
+ * @param zMin `z`轴最小高度
+ * @param zMax `z`轴最大高度
+ * @param thetaMin 最小`theta`（纬度）值
+ * @param thetaMax 最大`theta`（纬度）值
+ * @param phiMax 最大`phi`（经度）值
+ */
 class Sphere : public Shape {
-  public:
+   public:
     // Sphere Public Methods
-    Sphere(const Transform *ObjectToWorld, const Transform *WorldToObject,
-           bool reverseOrientation, Float radius, Float zMin, Float zMax,
-           Float phiMax)
+
+    Sphere(const Transform* ObjectToWorld,
+           const Transform* WorldToObject,
+           bool             reverseOrientation,
+           Float            radius,
+           Float            zMin,
+           Float            zMax,
+           Float            phiMax)
         : Shape(ObjectToWorld, WorldToObject, reverseOrientation),
           radius(radius),
           zMin(Clamp(std::min(zMin, zMax), -radius, radius)),
@@ -57,28 +73,24 @@ class Sphere : public Shape {
           thetaMin(std::acos(Clamp(std::min(zMin, zMax) / radius, -1, 1))),
           thetaMax(std::acos(Clamp(std::max(zMin, zMax) / radius, -1, 1))),
           phiMax(Radians(Clamp(phiMax, 0, 360))) {}
-    Bounds3f ObjectBound() const;
-    bool Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
-                   bool testAlphaTexture) const;
-    bool IntersectP(const Ray &ray, bool testAlphaTexture) const;
-    Float Area() const;
-    Interaction Sample(const Point2f &u, Float *pdf) const;
-    Interaction Sample(const Interaction &ref, const Point2f &u,
-                       Float *pdf) const;
-    Float Pdf(const Interaction &ref, const Vector3f &wi) const;
-    Float SolidAngle(const Point3f &p, int nSamples) const;
+    Bounds3f    ObjectBound() const;
+    bool        Intersect(const Ray& ray, Float* tHit, SurfaceInteraction* isect, bool testAlphaTexture) const;
+    bool        IntersectP(const Ray& ray, bool testAlphaTexture) const;
+    Float       Area() const;
+    Interaction Sample(const Point2f& u, Float* pdf) const;
+    Interaction Sample(const Interaction& ref, const Point2f& u, Float* pdf) const;
+    Float       Pdf(const Interaction& ref, const Vector3f& wi) const;
+    Float       SolidAngle(const Point3f& p, int nSamples) const;
 
-  private:
+   private:
     // Sphere Private Data
+
     const Float radius;
     const Float zMin, zMax;
     const Float thetaMin, thetaMax, phiMax;
 };
 
-std::shared_ptr<Shape> CreateSphereShape(const Transform *o2w,
-                                         const Transform *w2o,
-                                         bool reverseOrientation,
-                                         const ParamSet &params);
+std::shared_ptr<Shape> CreateSphereShape(const Transform* o2w, const Transform* w2o, bool reverseOrientation, const ParamSet& params);
 
 }  // namespace pbrt
 

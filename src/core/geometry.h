@@ -31,17 +31,17 @@
  */
 
 #if defined(_MSC_VER)
-#define NOMINMAX
-#pragma once
+    #define NOMINMAX
+    #pragma once
 #endif
 
 #ifndef PBRT_CORE_GEOMETRY_H
-#define PBRT_CORE_GEOMETRY_H
+    #define PBRT_CORE_GEOMETRY_H
 
-// core/geometry.h*
-#include <iterator>
-#include "pbrt.h"
-#include "stringprint.h"
+    // core/geometry.h*
+    #include <iterator>
+    #include "pbrt.h"
+    #include "stringprint.h"
 
 namespace pbrt {
 
@@ -60,7 +60,6 @@ inline bool isNaN(const int x) {
 
 /**
  * @brief 二维向量
- * @param T 向量元素类型
  * @param x 第一维参数
  * @param y 第二维参数
  */
@@ -74,7 +73,7 @@ class Vector2 {
     bool HasNaNs() const { return isNaN(x) || isNaN(y); }
     explicit Vector2(const Point2<T>& p);
     explicit Vector2(const Point3<T>& p);
-#ifndef NDEBUG  // 调试模式
+    #ifndef NDEBUG  // 调试模式
     // The default versions of these are fine for release builds; for debug
     // we define them so that we can add the Assert checks.
 
@@ -89,7 +88,7 @@ class Vector2 {
         y = v.y;
         return *this;
     }
-#endif  // !NDEBUG
+    #endif  // !NDEBUG
 
     Vector2<T> operator+(const Vector2<T>& v) const {
         DCHECK(!v.HasNaNs());
@@ -198,7 +197,6 @@ inline std::ostream& operator<<(std::ostream& os, const Vector2<Float>& v) {
 
 /**
  * @brief 三维向量
- * @param T 向量元素类型
  * @param x 第一维参数
  * @param y 第二维参数
  * @param z 第三维参数
@@ -233,7 +231,7 @@ class Vector3 {
     Vector3(T x, T y, T z) : x(x), y(y), z(z) { DCHECK(!HasNaNs()); }
     bool HasNaNs() const { return isNaN(x) || isNaN(y) || isNaN(z); }
     explicit Vector3(const Point3<T>& p);
-#ifndef NDEBUG
+    #ifndef NDEBUG
     // The default versions of these are fine for release builds; for debug
     // we define them so that we can add the Assert checks.
     Vector3(const Vector3<T>& v) {
@@ -250,7 +248,7 @@ class Vector3 {
         z = v.z;
         return *this;
     }
-#endif  // !NDEBUG
+    #endif  // !NDEBUG
     Vector3<T> operator+(const Vector3<T>& v) const {
         DCHECK(!v.HasNaNs());
         return Vector3(x + v.x, y + v.y, z + v.z);
@@ -346,7 +344,6 @@ typedef Vector3<int>   Vector3i;
 
 /**
  * @brief 二维坐标
- * @param T 坐标元素类型
  * @param x 第一维参数
  * @param y 第二维参数
  */
@@ -417,7 +414,7 @@ class Point2 {
         return Vector2<U>(x, y);
     }
 
-#ifndef NDEBUG
+    #ifndef NDEBUG
     Point2(const Point2<T>& p) {
         DCHECK(!p.HasNaNs());
         x = p.x;
@@ -430,7 +427,7 @@ class Point2 {
         y = p.y;
         return *this;
     }
-#endif  // !NDEBUG
+    #endif  // !NDEBUG
     /**
      * @brief 坐标加向量
      * @return 新的二维坐标
@@ -575,7 +572,7 @@ class Point3 {
     explicit operator Vector3<U>() const {
         return Vector3<U>(x, y, z);
     }
-#ifndef NDEBUG
+    #ifndef NDEBUG
     Point3(const Point3<T>& p) {
         DCHECK(!p.HasNaNs());
         x = p.x;
@@ -590,7 +587,7 @@ class Point3 {
         z = p.z;
         return *this;
     }
-#endif  // !NDEBUG
+    #endif  // !NDEBUG
     Point3<T> operator+(const Vector3<T>& v) const {
         DCHECK(!v.HasNaNs());
         return Point3<T>(x + v.x, y + v.y, z + v.z);
@@ -673,6 +670,7 @@ class Point3 {
     Point3<T> operator-() const { return Point3<T>(-x, -y, -z); }
 
     // Point3 Public Data
+
     T x, y, z;
 };
 
@@ -774,7 +772,7 @@ class Normal3 {
      */
     Float Length() const { return std::sqrt(LengthSquared()); }
 
-#ifndef NDEBUG
+    #ifndef NDEBUG
     Normal3<T>(const Normal3<T>& n) {
         DCHECK(!n.HasNaNs());
         x = n.x;
@@ -789,7 +787,7 @@ class Normal3 {
         z = n.z;
         return *this;
     }
-#endif  // !NDEBUG
+    #endif  // !NDEBUG
     explicit Normal3<T>(const Vector3<T>& v) : x(v.x), y(v.y), z(v.z) { DCHECK(!v.HasNaNs()); }
     bool operator==(const Normal3<T>& n) const { return x == n.x && y == n.y && z == n.z; }
     bool operator!=(const Normal3<T>& n) const { return x != n.x || y != n.y || z != n.z; }
@@ -1156,7 +1154,7 @@ Vector3<T> Abs(const Vector3<T>& v) {
  * @param T 向量元素类型
  * @param v1 向量1
  * @param v2 向量2
- * @return `T` 类型的内积结果
+ * @return 内积值
  */
 template <typename T>
 inline T Dot(const Vector3<T>& v1, const Vector3<T>& v2) {
@@ -1166,10 +1164,9 @@ inline T Dot(const Vector3<T>& v1, const Vector3<T>& v2) {
 
 /**
  * @brief 内积绝对值
- * @param T 向量元素类型
  * @param v1 向量1
  * @param v2 向量2
- * @return `T` 类型的内积结果的绝对值
+ * @return 内积绝对值
  */
 template <typename T>
 inline T AbsDot(const Vector3<T>& v1, const Vector3<T>& v2) {
@@ -1178,11 +1175,10 @@ inline T AbsDot(const Vector3<T>& v1, const Vector3<T>& v2) {
 }
 
 /**
- * @brief 外积
- * @param T 向量元素类型
+ * @brief 外积（左手系，逆时针）
  * @param v1 向量
  * @param v2 向量
- * @return 一个`Vector3<T>` 类型的外积结果
+ * @return 三维的外积向量
  */
 template <typename T>
 inline Vector3<T> Cross(const Vector3<T>& v1, const Vector3<T>& v2) {
@@ -1194,11 +1190,10 @@ inline Vector3<T> Cross(const Vector3<T>& v1, const Vector3<T>& v2) {
 }
 
 /**
- * @brief 外积
- * @param T 向量元素类型
+ * @brief 外积（左手系，逆时针）
  * @param v1 向量
  * @param v2 法线
- * @return 一个`Vector3<T>` 类型的外积结果
+ * @return 三维的外积向量
  */
 template <typename T>
 inline Vector3<T> Cross(const Vector3<T>& v1, const Normal3<T>& v2) {
@@ -1210,11 +1205,10 @@ inline Vector3<T> Cross(const Vector3<T>& v1, const Normal3<T>& v2) {
 }
 
 /**
- * @brief 外积
- * @param T 向量元素类型
+ * @brief 外积（左手系，逆时针）
  * @param v1 法线
  * @param v2 向量
- * @return 一个`Vector3<T>` 类型的外积结果
+ * @return 三维的外积向量
  */
 template <typename T>
 inline Vector3<T> Cross(const Normal3<T>& v1, const Vector3<T>& v2) {
@@ -1227,7 +1221,7 @@ inline Vector3<T> Cross(const Normal3<T>& v1, const Vector3<T>& v2) {
 
 /**
  * @brief 规范化为单位向量
- * @return 一个新的三维单位向量
+ * @return 单位化三维向量
  */
 template <typename T>
 inline Vector3<T> Normalize(const Vector3<T>& v) {
@@ -1235,7 +1229,7 @@ inline Vector3<T> Normalize(const Vector3<T>& v) {
 }
 /**
  * @brief 求三维向量的最小分量
- * @return 一个新的类型为`T`的最小值
+ * @return 分量最小值
  */
 template <typename T>
 T MinComponent(const Vector3<T>& v) {
@@ -1243,7 +1237,7 @@ T MinComponent(const Vector3<T>& v) {
 }
 /**
  * @brief 求三维向量的最大分量
- * @return 一个新的类型为`T`的最大值
+ * @return 分量最大值
  */
 template <typename T>
 T MaxComponent(const Vector3<T>& v) {
@@ -1251,7 +1245,7 @@ T MaxComponent(const Vector3<T>& v) {
 }
 /**
  * @brief 求三维向量最大分量的维度
- * @return `int`类型的索引
+ * @return `[0,3)`的最大分量维度
  */
 template <typename T>
 int MaxDimension(const Vector3<T>& v) {
@@ -1259,7 +1253,7 @@ int MaxDimension(const Vector3<T>& v) {
 }
 /**
  * @brief 在两个向量中，取每个分量的较小值组成新的向量
- * @return 一个新的`Vector3<T>`类型的三维向量
+ * @return 最小三维分量向量
  */
 template <typename T>
 Vector3<T> Min(const Vector3<T>& p1, const Vector3<T>& p2) {
@@ -1268,7 +1262,7 @@ Vector3<T> Min(const Vector3<T>& p1, const Vector3<T>& p2) {
 
 /**
  * @brief 在两个向量中，取每个分量的较大值组成新的向量
- * @return 一个新的`Vector3<T>`类型的三维向量
+ * @return 最大三维分量向量
  */
 template <typename T>
 Vector3<T> Max(const Vector3<T>& p1, const Vector3<T>& p2) {
@@ -1280,7 +1274,7 @@ Vector3<T> Max(const Vector3<T>& p1, const Vector3<T>& p2) {
  * @param x 第一维索引
  * @param y 第二维索引
  * @param z 第三维索引
- * @return 一个新的`Vector3<T>`类型的三维向量
+ * @return 按索引重新排列的三维向量
  */
 template <typename T>
 Vector3<T> Permute(const Vector3<T>& v, int x, int y, int z) {
@@ -1330,7 +1324,7 @@ inline Float AbsDot(const Vector2<T>& v1, const Vector2<T>& v2) {
 
 /**
  * @brief 规范化为单位向量
- * @return 新的二维单位向量
+ * @return 单位话二维向量
  */
 template <typename T>
 inline Vector2<T> Normalize(const Vector2<T>& v) {
@@ -1347,7 +1341,7 @@ Vector2<T> Abs(const Vector2<T>& v) {
 
 /**
  * @brief 求两点间距离
- * @return 新的`Float`类型的浮点数
+ * @return 平方欧氏距离
  */
 template <typename T>
 inline Float Distance(const Point3<T>& p1, const Point3<T>& p2) {
@@ -1356,7 +1350,7 @@ inline Float Distance(const Point3<T>& p1, const Point3<T>& p2) {
 
 /**
  * @brief 求两点间距离的平方
- * @return 新的`Float`类型的浮点数
+ * @return 平方欧氏距离
  */
 template <typename T>
 inline Float DistanceSquared(const Point3<T>& p1, const Point3<T>& p2) {
@@ -1372,7 +1366,7 @@ inline Point3<T> operator*(U f, const Point3<T>& p) {
 /**
  * @brief 求两点间的线性插值坐标
  * @param t 插值系数，当`t = 0`时，返回`v0`，当`t = 1`时，返回`v1`.
- * @return 新的`Point2<T>`类型的三维点，位于`v0`和`v1`的直线上。
+ * @return 位于`v0`和`v1`的直线上的三维坐标点
  */
 template <typename T>
 Point3<T> Lerp(Float t, const Point3<T>& p0, const Point3<T>& p1) {
@@ -1381,7 +1375,7 @@ Point3<T> Lerp(Float t, const Point3<T>& p0, const Point3<T>& p1) {
 
 /**
  * @brief 在两个点中，取每个分量的较小值组成新的坐标
- * @return 一个新的`Point3<T>`类型的三维坐标
+ * @return 最小三维分量坐标
  */
 template <typename T>
 Point3<T> Min(const Point3<T>& p1, const Point3<T>& p2) {
@@ -1390,7 +1384,7 @@ Point3<T> Min(const Point3<T>& p1, const Point3<T>& p2) {
 
 /**
  * @brief 在两个点中，取每个分量的较小值组成新的坐标
- * @return 一个新的`Point3<T>`类型的三维坐标
+ * @return 最大三维分量坐标
  */
 template <typename T>
 Point3<T> Max(const Point3<T>& p1, const Point3<T>& p2) {
@@ -1423,7 +1417,7 @@ Point3<T> Abs(const Point3<T>& p) {
 
 /**
  * @brief 求两点间距离
- * @return 新的`Float`类型的浮点数
+ * @return F浮点型距离
  */
 template <typename T>
 inline Float Distance(const Point2<T>& p1, const Point2<T>& p2) {
@@ -1432,7 +1426,7 @@ inline Float Distance(const Point2<T>& p1, const Point2<T>& p2) {
 
 /**
  * @brief 求两点间距离
- * @return 新的`Float`类型的浮点数
+ * @return 浮点型距离
  */
 template <typename T>
 inline Float DistanceSquared(const Point2<T>& p1, const Point2<T>& p2) {
@@ -1464,7 +1458,7 @@ Point2<T> Ceil(const Point2<T>& p) {
 /**
  * @brief 求两点间的线性插值坐标
  * @param t 插值系数，当`t = 0`时，返回`v0`，当`t = 1`时，返回`v1`.
- * @return 新的`Point2<T>`类型的二维点，位于`v0`和`v1`的直线上。
+ * @return 位于`v0`和`v1`的直线上的二维坐标点
  */
 template <typename T>
 Point2<T> Lerp(Float t, const Point2<T>& v0, const Point2<T>& v1) {
@@ -1473,7 +1467,7 @@ Point2<T> Lerp(Float t, const Point2<T>& v0, const Point2<T>& v1) {
 
 /**
  * @brief 在两个点中，取每个分量的较小值组成新的坐标
- * @return 一个新的`Point2<T>`类型的三维坐标
+ * @return 最二维小分量坐标
  */
 template <typename T>
 Point2<T> Min(const Point2<T>& pa, const Point2<T>& pb) {
@@ -1482,7 +1476,7 @@ Point2<T> Min(const Point2<T>& pa, const Point2<T>& pb) {
 
 /**
  * @brief 在两个点中，取每个分量的较大值组成新的坐标
- * @return 一个新的`Point2<T>`类型的三维坐标
+ * @return 最大二维分量坐标
  */
 template <typename T>
 Point2<T> Max(const Point2<T>& pa, const Point2<T>& pb) {
@@ -1501,7 +1495,7 @@ inline Normal3<T> operator*(U f, const Normal3<T>& n) {
 
 /**
  * @brief 规范化为单位向量
- * @return 新的三维单位向量??????????????????????????????
+ * @return 规范化的三维法向量
  */
 template <typename T>
 inline Normal3<T> Normalize(const Normal3<T>& n) {
@@ -1550,7 +1544,10 @@ inline T AbsDot(const Normal3<T>& n1, const Normal3<T>& n2) {
 }
 
 /**
- * @brief 调整法线内积大小为正
+ * @brief 调整法线方向，使其与指定向量方向一致（方向夹角小于90度）
+ * @param n 待调整法线
+ * @param v 指定向量方向
+ * @return 若法线与指定向量方向一致，返回`n`，否则返回`-n`
  */
 template <typename T>
 inline Normal3<T> Faceforward(const Normal3<T>& n, const Vector3<T>& v) {
@@ -1558,7 +1555,10 @@ inline Normal3<T> Faceforward(const Normal3<T>& n, const Vector3<T>& v) {
 }
 
 /**
- * @brief 调整法线内积大小为正
+ * @brief 调整法线方向，使其与指定法线方向一致（方向夹角小于90度）
+ * @param n 待调整法线
+ * @param n2 指定法线方向
+ * @return 若法线与指定法线方向一致，返回`n`，否则返回`-n`
  */
 template <typename T>
 inline Normal3<T> Faceforward(const Normal3<T>& n, const Normal3<T>& n2) {
@@ -1566,7 +1566,10 @@ inline Normal3<T> Faceforward(const Normal3<T>& n, const Normal3<T>& n2) {
 }
 
 /**
- * @brief 调整法线内积大小为正
+ * @brief 调整向量方向，使其与指定向量方向一致（方向夹角小于90度）
+ * @param v 待调整向量
+ * @param v2 指定向量方向
+ * @return 若向量与指定向量方向一致，返回`v`，否则返回`-v`
  */
 template <typename T>
 inline Vector3<T> Faceforward(const Vector3<T>& v, const Vector3<T>& v2) {
@@ -1574,7 +1577,10 @@ inline Vector3<T> Faceforward(const Vector3<T>& v, const Vector3<T>& v2) {
 }
 
 /**
- * @brief 调整法线内积大小为正
+ * @brief 调整向量方向，使其与指定法线方向一致（方向夹角小于90度）
+ * @param v 待调整向量
+ * @param n2 指定法线方向
+ * @return 若向量与指定法线方向一致，返回`v`，否则返回`-v`
  */
 template <typename T>
 inline Vector3<T> Faceforward(const Vector3<T>& v, const Normal3<T>& n2) {
@@ -1779,19 +1785,27 @@ Bounds2<T> Expand(const Bounds2<T>& b, U delta) {
     return Bounds2<T>(b.pMin - Vector2<T>(delta, delta), b.pMax + Vector2<T>(delta, delta));
 }
 
+/**
+ * @brief 光线与包围盒相交
+ * @param ray 光线
+ * @param hitt0 光线与物体交的最近距离
+ * @param hitt1 光线与物体交的最远距离
+ *@return 如果判断成功相交返回`true`，否则返回`false`
+ */
 template <typename T>
 inline bool Bounds3<T>::IntersectP(const Ray& ray, Float* hitt0, Float* hitt1) const {
     Float t0 = 0, t1 = ray.tMax;
     for (int i = 0; i < 3; ++i) {
-        // Update interval for _i_th bounding box slab
+        // 根据包围盒的每个对面计算出射线的参数
+
         Float invRayDir = 1 / ray.d[i];
         Float tNear     = (pMin[i] - ray.o[i]) * invRayDir;
         Float tFar      = (pMax[i] - ray.o[i]) * invRayDir;
 
-        // Update parametric interval from slab intersection $t$ values
+        // 更新远近交点
         if (tNear > tFar) std::swap(tNear, tFar);
 
-        // Update _tFar_ to ensure robust ray--bounds intersection
+        // 保证任何出现Nan的情况都会被返回false
         tFar *= 1 + 2 * gamma(3);
         t0 = tNear > t0 ? tNear : t0;
         t1 = tFar < t1 ? tFar : t1;
@@ -1802,6 +1816,15 @@ inline bool Bounds3<T>::IntersectP(const Ray& ray, Float* hitt0, Float* hitt1) c
     return true;
 }
 
+/**
+ * @brief 光线与包围盒相交
+ *
+ * 该重载接收光线的预处理参数，求交速度更快
+ * @param ray 光线
+ * @param invDir 光线方向每个维度的倒数
+ * @param dirIsNeg[3] 光线每个方向的分量是否为负
+ * @return 如果判断成功相交返回`true`，否则返回`false`
+ */
 template <typename T>
 inline bool Bounds3<T>::IntersectP(const Ray& ray, const Vector3f& invDir, const int dirIsNeg[3]) const {
     const Bounds3f& bounds = *this;

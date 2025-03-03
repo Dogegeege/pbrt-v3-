@@ -48,11 +48,11 @@
 namespace pbrt {
 
 /**
- * @brief 几何形状类接口
+ * @brief 几何形状基类
  * @param ObjectToWorld 物体坐标系到世界坐标系的变换
  * @param WorldToObject 世界坐标系到物体坐标系的变换(`ObjectToWorld`的逆变换)
  * @param reverseOrientation 曲面法线方向是否反向
- * @param transformSwapsHandedness 变换是否改变了坐标系的左右手性
+ * @param transformSwapsHandedness 变换是否改变了坐标系的左右手性（如缩放变换`S(1,1,-1)` ）
  */
 class Shape {
    public:
