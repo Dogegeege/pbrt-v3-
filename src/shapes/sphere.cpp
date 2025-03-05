@@ -49,11 +49,11 @@ bool Sphere::Intersect(const Ray& r, Float* tHit, SurfaceInteraction* isect, boo
     ProfilePhase p(Prof::ShapeIntersect);
     Float        phi;
     Point3f      pHit;
-    // Transform _Ray_ to object space
+    // 变换光线为物体坐标系
     Vector3f     oErr, dErr;
     Ray          ray = (*WorldToObject)(r, &oErr, &dErr);
 
-    // Compute quadratic sphere coefficients
+    // 计算球面方程系数
 
     // Initialize _EFloat_ ray coordinate values
     EFloat ox(ray.o.x, oErr.x), oy(ray.o.y, oErr.y), oz(ray.o.z, oErr.z);
@@ -66,32 +66,33 @@ bool Sphere::Intersect(const Ray& r, Float* tHit, SurfaceInteraction* isect, boo
     EFloat t0, t1;
     if (!Quadratic(a, b, c, &t0, &t1)) return false;
 
-    // Check quadric shape _t0_ and _t1_ for nearest intersection
+    // 检查交点t在(0,tMax]范围内，并找出最近的交点
     if (t0.UpperBound() > ray.tMax || t1.LowerBound() <= 0) return false;
     EFloat tShapeHit = t0;
-    if (tShapeHit.LowerBound() <= 0) {
+    if (tShapeHit.LowerBound() <= 0) {  // 舍去负根
         tShapeHit = t1;
         if (tShapeHit.UpperBound() > ray.tMax) return false;
     }
 
-    // Compute sphere hit position and $\phi$
+    // 计算球面交点位置和phi
     pHit = ray((Float)tShapeHit);
 
-    // Refine sphere intersection point
+    // 修正交点位置
     pHit *= radius / Distance(pHit, Point3f(0, 0, 0));
+
     if (pHit.x == 0 && pHit.y == 0) pHit.x = 1e-5f * radius;
     phi = std::atan2(pHit.y, pHit.x);
     if (phi < 0) phi += 2 * Pi;
 
-    // Test sphere intersection against clipping parameters
+    // 根据剪裁参数测试球体近交点
     if ((zMin > -radius && pHit.z < zMin) || (zMax < radius && pHit.z > zMax) || phi > phiMax) {
-        if (tShapeHit == t1) return false;
-        if (t1.UpperBound() > ray.tMax) return false;
+        if (tShapeHit == t1) return false;             // 光线原点在球面内，裁切掉唯一交点
+        if (t1.UpperBound() > ray.tMax) return false;  // 远交点在tMax之外
         tShapeHit = t1;
         // Compute sphere hit position and $\phi$
         pHit      = ray((Float)tShapeHit);
 
-        // Refine sphere intersection point
+        // 远交点再求一遍
         pHit *= radius / Distance(pHit, Point3f(0, 0, 0));
         if (pHit.x == 0 && pHit.y == 0) pHit.x = 1e-5f * radius;
         phi = std::atan2(pHit.y, pHit.x);
@@ -99,12 +100,14 @@ bool Sphere::Intersect(const Ray& r, Float* tHit, SurfaceInteraction* isect, boo
         if ((zMin > -radius && pHit.z < zMin) || (zMax < radius && pHit.z > zMax) || phi > phiMax) return false;
     }
 
-    // Find parametric representation of sphere hit
+    // 计算交点处(u,v)坐标
+    // phi = u * phiMax;
+    // theta = v * (thetaMax - thetaMin) + thetaMin;
     Float u     = phi / phiMax;
     Float theta = std::acos(Clamp(pHit.z / radius, -1, 1));
     Float v     = (theta - thetaMin) / (thetaMax - thetaMin);
 
-    // Compute sphere $\dpdu$ and $\dpdv$
+    // 计算交点处对(u,v)的梯度
     Float    zRadius    = std::sqrt(pHit.x * pHit.x + pHit.y * pHit.y);
     Float    invZRadius = 1 / zRadius;
     Float    cosPhi     = pHit.x * invZRadius;
