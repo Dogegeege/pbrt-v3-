@@ -39,25 +39,39 @@
 #define PBRT_SHAPES_TRIANGLE_H
 
 // shapes/triangle.h*
+#include <map>
+
 #include "shape.h"
 #include "stats.h"
-#include <map>
 
 namespace pbrt {
 
 STAT_MEMORY_COUNTER("Memory/Triangle meshes", triMeshBytes);
 
-// Triangle Declarations
+/**
+ * @brief 几何体的三角形网格，整个网格构造时即映射到世界坐标系中
+ * @param nTriangles  三角形数量
+ * @param nVertices  顶点数量
+ * @param vertexIndices
+ * 三角形顶点坐标的索引数组，每个三角形的顶点可根据索引分别得到`p[vertexIndices[3
+ * * i]]`、`p[vertexIndices[3 * i + 1]]`、`p[vertexIndices[3 * i + 2]]`
+ * @param p  网格顶点的坐标（已映射到世界坐标系）数组
+ * @param s  可选项，网格顶点的切线向量（已映射到世界坐标系）数组
+ * @param n  可选项，网格顶点的法线向量（已映射到世界坐标系）数组
+ * @param uv  可选项，网格顶点的纹理(u , v)坐标数组
+ *
+ */
 struct TriangleMesh {
     // TriangleMesh Public Methods
-    TriangleMesh(const Transform &ObjectToWorld, int nTriangles,
-                 const int *vertexIndices, int nVertices, const Point3f *P,
-                 const Vector3f *S, const Normal3f *N, const Point2f *uv,
-                 const std::shared_ptr<Texture<Float>> &alphaMask,
-                 const std::shared_ptr<Texture<Float>> &shadowAlphaMask,
-                 const int *faceIndices);
+    TriangleMesh(const Transform& ObjectToWorld, int nTriangles,
+                 const int* vertexIndices, int nVertices, const Point3f* P,
+                 const Vector3f* S, const Normal3f* N, const Point2f* uv,
+                 const std::shared_ptr<Texture<Float>>& alphaMask,
+                 const std::shared_ptr<Texture<Float>>& shadowAlphaMask,
+                 const int* faceIndices);
 
-    // TriangleMesh Data
+    // 使用 unique_ptr 禁止共享实例化模型的指针
+    // 测试模型/贴图可以共享指针
     const int nTriangles, nVertices;
     std::vector<int> vertexIndices;
     std::unique_ptr<Point3f[]> p;
@@ -68,11 +82,16 @@ struct TriangleMesh {
     std::vector<int> faceIndices;
 };
 
+/**
+ * @brief 三角形，继承自 `Shape`
+ * @param mesh 指向三角形所属几何体网格的指针
+ * @param v 指向第一个顶点的索引指针
+ */
 class Triangle : public Shape {
   public:
     // Triangle Public Methods
-    Triangle(const Transform *ObjectToWorld, const Transform *WorldToObject,
-             bool reverseOrientation, const std::shared_ptr<TriangleMesh> &mesh,
+    Triangle(const Transform* ObjectToWorld, const Transform* WorldToObject,
+             bool reverseOrientation, const std::shared_ptr<TriangleMesh>& mesh,
              int triNumber)
         : Shape(ObjectToWorld, WorldToObject, reverseOrientation), mesh(mesh) {
         v = &mesh->vertexIndices[3 * triNumber];
@@ -81,17 +100,17 @@ class Triangle : public Shape {
     }
     Bounds3f ObjectBound() const;
     Bounds3f WorldBound() const;
-    bool Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
+    bool Intersect(const Ray& ray, Float* tHit, SurfaceInteraction* isect,
                    bool testAlphaTexture = true) const;
-    bool IntersectP(const Ray &ray, bool testAlphaTexture = true) const;
+    bool IntersectP(const Ray& ray, bool testAlphaTexture = true) const;
     Float Area() const;
 
     using Shape::Sample;  // Bring in the other Sample() overload.
-    Interaction Sample(const Point2f &u, Float *pdf) const;
+    Interaction Sample(const Point2f& u, Float* pdf) const;
 
     // Returns the solid angle subtended by the triangle w.r.t. the given
     // reference point p.
-    Float SolidAngle(const Point3f &p, int nSamples = 0) const;
+    Float SolidAngle(const Point3f& p, int nSamples = 0) const;
 
   private:
     // Triangle Private Methods
@@ -109,27 +128,27 @@ class Triangle : public Shape {
 
     // Triangle Private Data
     std::shared_ptr<TriangleMesh> mesh;
-    const int *v;
+    const int* v;
     int faceIndex;
 };
 
 std::vector<std::shared_ptr<Shape>> CreateTriangleMesh(
-    const Transform *o2w, const Transform *w2o, bool reverseOrientation,
-    int nTriangles, const int *vertexIndices, int nVertices, const Point3f *p,
-    const Vector3f *s, const Normal3f *n, const Point2f *uv,
-    const std::shared_ptr<Texture<Float>> &alphaTexture,
-    const std::shared_ptr<Texture<Float>> &shadowAlphaTexture,
-    const int *faceIndices = nullptr);
+    const Transform* o2w, const Transform* w2o, bool reverseOrientation,
+    int nTriangles, const int* vertexIndices, int nVertices, const Point3f* p,
+    const Vector3f* s, const Normal3f* n, const Point2f* uv,
+    const std::shared_ptr<Texture<Float>>& alphaTexture,
+    const std::shared_ptr<Texture<Float>>& shadowAlphaTexture,
+    const int* faceIndices = nullptr);
 std::vector<std::shared_ptr<Shape>> CreateTriangleMeshShape(
-    const Transform *o2w, const Transform *w2o, bool reverseOrientation,
-    const ParamSet &params,
-    std::map<std::string, std::shared_ptr<Texture<Float>>> *floatTextures =
+    const Transform* o2w, const Transform* w2o, bool reverseOrientation,
+    const ParamSet& params,
+    std::map<std::string, std::shared_ptr<Texture<Float>>>* floatTextures =
         nullptr);
 
-bool WritePlyFile(const std::string &filename, int nTriangles,
-                  const int *vertexIndices, int nVertices, const Point3f *P,
-                  const Vector3f *S, const Normal3f *N, const Point2f *UV,
-                  const int *faceIndices);
+bool WritePlyFile(const std::string& filename, int nTriangles,
+                  const int* vertexIndices, int nVertices, const Point3f* P,
+                  const Vector3f* S, const Normal3f* N, const Point2f* UV,
+                  const int* faceIndices);
 
 }  // namespace pbrt
 

@@ -313,6 +313,12 @@ bool Transform::SwapsHandedness() const {
     return det < 0;
 }
 
+/**
+ * @brief 变换作用于曲面表面交互作用类
+ * @param si 待变换曲面
+ * @return 变换后的曲面表面交互作用类
+ *
+ */
 SurfaceInteraction Transform::operator()(const SurfaceInteraction& si) const {
     SurfaceInteraction ret;
     // Transform _p_ and _pError_ in _SurfaceInteraction_

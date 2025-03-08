@@ -32,13 +32,15 @@
 
 // shapes/triangle.cpp*
 #include "shapes/triangle.h"
-#include "texture.h"
-#include "textures/constant.h"
-#include "paramset.h"
-#include "sampling.h"
+
+#include <array>
+
 #include "efloat.h"
 #include "ext/rply.h"
-#include <array>
+#include "paramset.h"
+#include "sampling.h"
+#include "texture.h"
+#include "textures/constant.h"
 
 namespace pbrt {
 
@@ -51,12 +53,12 @@ static void PlyErrorCallback(p_ply, const char *message) {
 
 // Triangle Method Definitions
 STAT_RATIO("Scene/Triangles per triangle mesh", nTris, nMeshes);
+
 TriangleMesh::TriangleMesh(
     const Transform &ObjectToWorld, int nTriangles, const int *vertexIndices,
     int nVertices, const Point3f *P, const Vector3f *S, const Normal3f *N,
     const Point2f *UV, const std::shared_ptr<Texture<Float>> &alphaMask,
-    const std::shared_ptr<Texture<Float>> &shadowAlphaMask,
-    const int *fIndices)
+    const std::shared_ptr<Texture<Float>> &shadowAlphaMask, const int *fIndices)
     : nTriangles(nTriangles),
       nVertices(nVertices),
       vertexIndices(vertexIndices, vertexIndices + 3 * nTriangles),
@@ -91,6 +93,10 @@ TriangleMesh::TriangleMesh(
         faceIndices = std::vector<int>(fIndices, fIndices + nTriangles);
 }
 
+/**
+ * @brief 初始化三角形网格，并返回网格内的所有三角形
+ * @return 包含三角形指针的数组
+ */
 std::vector<std::shared_ptr<Shape>> CreateTriangleMesh(
     const Transform *ObjectToWorld, const Transform *WorldToObject,
     bool reverseOrientation, int nTriangles, const int *vertexIndices,
@@ -102,7 +108,7 @@ std::vector<std::shared_ptr<Shape>> CreateTriangleMesh(
         *ObjectToWorld, nTriangles, vertexIndices, nVertices, p, s, n, uv,
         alphaMask, shadowAlphaMask, faceIndices);
     std::vector<std::shared_ptr<Shape>> tris;
-    tris.reserve(nTriangles);
+    tris.reserve(nTriangles);  // 预分配内存
     for (int i = 0; i < nTriangles; ++i)
         tris.push_back(std::make_shared<Triangle>(ObjectToWorld, WorldToObject,
                                                   reverseOrientation, mesh, i));
@@ -115,8 +121,7 @@ bool WritePlyFile(const std::string &filename, int nTriangles,
                   const int *faceIndices) {
     p_ply plyFile =
         ply_create(filename.c_str(), PLY_DEFAULT, PlyErrorCallback, 0, nullptr);
-    if (plyFile == nullptr)
-        return false;
+    if (plyFile == nullptr) return false;
 
     ply_add_element(plyFile, "vertex", nVertices);
     ply_add_scalar_property(plyFile, "x", PLY_FLOAT);
@@ -137,8 +142,7 @@ bool WritePlyFile(const std::string &filename, int nTriangles,
 
     ply_add_element(plyFile, "face", nTriangles);
     ply_add_list_property(plyFile, "vertex_indices", PLY_UINT8, PLY_INT);
-    if (faceIndices)
-        ply_add_scalar_property(plyFile, "face_indices", PLY_INT);
+    if (faceIndices) ply_add_scalar_property(plyFile, "face_indices", PLY_INT);
     ply_write_header(plyFile);
 
     for (int i = 0; i < nVertices; ++i) {
@@ -161,13 +165,15 @@ bool WritePlyFile(const std::string &filename, int nTriangles,
         ply_write(plyFile, vertexIndices[3 * i]);
         ply_write(plyFile, vertexIndices[3 * i + 1]);
         ply_write(plyFile, vertexIndices[3 * i + 2]);
-        if (faceIndices)
-            ply_write(plyFile, faceIndices[i]);
+        if (faceIndices) ply_write(plyFile, faceIndices[i]);
     }
     ply_close(plyFile);
     return true;
 }
 
+/**
+ * @brief 三角形的物体坐标系包围盒
+ */
 Bounds3f Triangle::ObjectBound() const {
     // Get triangle vertices in _p0_, _p1_, and _p2_
     const Point3f &p0 = mesh->p[v[0]];
@@ -177,6 +183,9 @@ Bounds3f Triangle::ObjectBound() const {
                  (*WorldToObject)(p2));
 }
 
+/**
+ * @brief 三角形的世界坐标系包围盒
+ */
 Bounds3f Triangle::WorldBound() const {
     // Get triangle vertices in _p0_, _p1_, and _p2_
     const Point3f &p0 = mesh->p[v[0]];
@@ -608,10 +617,9 @@ Interaction Triangle::Sample(const Point2f &u, Float *pdf) const {
 
 Float Triangle::SolidAngle(const Point3f &p, int nSamples) const {
     // Project the vertices into the unit sphere around p.
-    std::array<Vector3f, 3> pSphere = {
-        Normalize(mesh->p[v[0]] - p), Normalize(mesh->p[v[1]] - p),
-        Normalize(mesh->p[v[2]] - p)
-    };
+    std::array<Vector3f, 3> pSphere = {Normalize(mesh->p[v[0]] - p),
+                                       Normalize(mesh->p[v[1]] - p),
+                                       Normalize(mesh->p[v[2]] - p)};
 
     // http://math.stackexchange.com/questions/9819/area-of-a-spherical-triangle
     // Girard's theorem: surface area of a spherical triangle on a unit
@@ -638,10 +646,9 @@ Float Triangle::SolidAngle(const Point3f &p, int nSamples) const {
     // We only need to do three cross products to evaluate the angles at
     // all three vertices, though, since we can take advantage of the fact
     // that Cross(a, b) = -Cross(b, a).
-    return std::abs(
-        std::acos(Clamp(Dot(cross01, -cross12), -1, 1)) +
-        std::acos(Clamp(Dot(cross12, -cross20), -1, 1)) +
-        std::acos(Clamp(Dot(cross20, -cross01), -1, 1)) - Pi);
+    return std::abs(std::acos(Clamp(Dot(cross01, -cross12), -1, 1)) +
+                    std::acos(Clamp(Dot(cross12, -cross20), -1, 1)) +
+                    std::acos(Clamp(Dot(cross20, -cross01), -1, 1)) - Pi);
 }
 
 std::vector<std::shared_ptr<Shape>> CreateTriangleMeshShape(

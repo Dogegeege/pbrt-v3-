@@ -45,12 +45,21 @@ Bounds3f Sphere::ObjectBound() const {
     return Bounds3f(Point3f(-radius, -radius, zMin), Point3f(radius, radius, zMax));
 }
 
+/**
+ * @brief 球体求交函数
+ * @param r 光线
+ * @param tHit 需要求交的光线参数t
+ * @param isect 交点信息
+ * @param testAlphaTexture 是否测试透明纹理
+ * @return 求交点成功返回true，否则返回false
+ *
+ */
 bool Sphere::Intersect(const Ray& r, Float* tHit, SurfaceInteraction* isect, bool testAlphaTexture) const {
-    ProfilePhase p(Prof::ShapeIntersect);
+    ProfilePhase p(Prof::ShapeIntersect);  // 性能分析
     Float        phi;
     Point3f      pHit;
     // 变换光线为物体坐标系
-    Vector3f     oErr, dErr;
+    Vector3f     oErr, dErr;  // 光线参数的误差
     Ray          ray = (*WorldToObject)(r, &oErr, &dErr);
 
     // 计算球面方程系数
@@ -107,7 +116,7 @@ bool Sphere::Intersect(const Ray& r, Float* tHit, SurfaceInteraction* isect, boo
     Float theta = std::acos(Clamp(pHit.z / radius, -1, 1));
     Float v     = (theta - thetaMin) / (thetaMax - thetaMin);
 
-    // 计算交点处对(u,v)的梯度
+    // 计算交点处对(u,v)的梯度向量
     Float    zRadius    = std::sqrt(pHit.x * pHit.x + pHit.y * pHit.y);
     Float    invZRadius = 1 / zRadius;
     Float    cosPhi     = pHit.x * invZRadius;
@@ -115,7 +124,7 @@ bool Sphere::Intersect(const Ray& r, Float* tHit, SurfaceInteraction* isect, boo
     Vector3f dpdu(-phiMax * pHit.y, phiMax * pHit.x, 0);
     Vector3f dpdv = (thetaMax - thetaMin) * Vector3f(pHit.z * cosPhi, pHit.z * sinPhi, -radius * std::sin(theta));
 
-    // Compute sphere $\dndu$ and $\dndv$
+    // 计算法线对(u,v)的偏导
     Vector3f d2Pduu = -phiMax * phiMax * Vector3f(pHit.x, pHit.y, 0);
     Vector3f d2Pduv = (thetaMax - thetaMin) * pHit.z * phiMax * Vector3f(-sinPhi, cosPhi, 0.);
     Vector3f d2Pdvv = -(thetaMax - thetaMin) * (thetaMax - thetaMin) * Vector3f(pHit.x, pHit.y, pHit.z);
@@ -137,7 +146,7 @@ bool Sphere::Intersect(const Ray& r, Float* tHit, SurfaceInteraction* isect, boo
     // Compute error bounds for sphere intersection
     Vector3f pError = gamma(5) * Abs((Vector3f)pHit);
 
-    // Initialize _SurfaceInteraction_ from parametric information
+    // 构造交互信息并映射回世界坐标系
     *isect = (*ObjectToWorld)(SurfaceInteraction(pHit, pError, Point2f(u, v), -ray.d, dpdu, dpdv, dndu, dndv, ray.time, this));
 
     // Update _tHit_ for quadric intersection
@@ -145,6 +154,13 @@ bool Sphere::Intersect(const Ray& r, Float* tHit, SurfaceInteraction* isect, boo
     return true;
 }
 
+/**
+ * @brief 球体求交函数，`Intersect`的简化版本，只返回是否求交成功
+ * @param r 光线
+ * @param testAlphaTexture 是否测试透明纹理
+ * @return 求交点成功返回true，否则返回false
+ *
+ */
 bool Sphere::IntersectP(const Ray& r, bool testAlphaTexture) const {
     ProfilePhase p(Prof::ShapeIntersectP);
     Float        phi;
@@ -201,6 +217,10 @@ bool Sphere::IntersectP(const Ray& r, bool testAlphaTexture) const {
     return true;
 }
 
+/**
+ * @brief 球体表面积
+ * @return 球体表面积
+ */
 Float Sphere::Area() const {
     return phiMax * radius * (zMax - zMin);
 }

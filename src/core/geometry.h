@@ -1060,11 +1060,11 @@ class Bounds2iIterator : public std::forward_iterator_tag {
     const Bounds2i* bounds;
 };
 /**
- * @brief 射线
+ * @brief 射线，r = o + t * d ，t表示射线上的某点位置，
  * @param o 起始坐标
  * @param d 射线方向
- * @param time 射线参数，o + time * d 表示射线上的某点位置，在有动画的场景中，`time`表示和场景关联的一个时间值
- * @param tMax 参数`time`的上限，表示射线最大长度。
+ * @param time 射线参数在有动画的场景中，`time`表示和场景关联的一个时间值
+ * @param tMax 参数`t`的上限，表示射线最大长度。
  * @param medium 射线端点所在的介质属性（如空气、水、玻璃等）
  */
 class Ray {
@@ -1073,7 +1073,10 @@ class Ray {
     Ray() : tMax(Infinity), time(0.f), medium(nullptr) {}
     Ray(const Point3f& o, const Vector3f& d, Float tMax = Infinity, Float time = 0.f, const Medium* medium = nullptr)
         : o(o), d(d), tMax(tMax), time(time), medium(medium) {}
-
+    /**
+     * @param t 射线参数
+     * @return 射线在参数`t`处的位置
+     */
     Point3f              operator()(Float t) const { return o + d * t; }
     bool                 HasNaNs() const { return (o.HasNaNs() || d.HasNaNs() || isNaN(tMax)); }
     friend std::ostream& operator<<(std::ostream& os, const Ray& r) {

@@ -110,7 +110,7 @@ class MediumInteraction : public Interaction {
 };
 
 /**
- * @brief 曲线表面交互作用类，记录了光线相交处的局部属性和几何特征，继承自`Interaction`
+ * @brief 曲面表面交互作用类，记录了光线相交处的局部属性和几何特征，继承自`Interaction`
  * @param p 交点
  * @param time 时间
  * @param pError 误差上界
@@ -123,7 +123,7 @@ class MediumInteraction : public Interaction {
  * @param dndv 交点处的法向量参数方程对`v`的偏导，表示固定`u`时，法线沿`v`方向的变化率
  * @param sh 形状（曲面）
  * @param faceIndex 面索引
- *@param shading 交点处的着色几何信息,用于凹凸贴图或者三角形插值中的扰动值
+ * @param shading 交点处的着色几何信息,用于凹凸贴图或者三角形插值中的扰动值
  */
 class SurfaceInteraction : public Interaction {
    public:
