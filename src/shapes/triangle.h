@@ -56,10 +56,12 @@ STAT_MEMORY_COUNTER("Memory/Triangle meshes", triMeshBytes);
  * 三角形顶点坐标的索引数组，每个三角形的顶点可根据索引分别得到`p[vertexIndices[3
  * * i]]`、`p[vertexIndices[3 * i + 1]]`、`p[vertexIndices[3 * i + 2]]`
  * @param p  网格顶点的坐标（已映射到世界坐标系）数组
- * @param s  可选项，网格顶点的切线向量（已映射到世界坐标系）数组
- * @param n  可选项，网格顶点的法线向量（已映射到世界坐标系）数组
+ * @param s
+ *可选项，网格顶点的切线向量（已映射到世界坐标系）数组，在着色时用于计算切线
+ * @param n
+ * 可选项，网格顶点的法线向量（已映射到世界坐标系）数组，在着色时用于计算插值法线
  * @param uv  可选项，网格顶点的纹理(u , v)坐标数组
- *
+ *@param alphaMask  可选项，网格的alpha遮罩纹理，使相交透明化，截去三角形部分
  */
 struct TriangleMesh {
     // TriangleMesh Public Methods
@@ -114,6 +116,11 @@ class Triangle : public Shape {
 
   private:
     // Triangle Private Methods
+
+    /**
+     * @brief 获取网格顶点的纹理(u , v)坐标数组
+     * @param uv[3]  待返回的三角形顶点的纹理(u , v)坐标数组
+     */
     void GetUVs(Point2f uv[3]) const {
         if (mesh->uv) {
             uv[0] = mesh->uv[v[0]];

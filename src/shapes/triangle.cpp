@@ -109,6 +109,7 @@ std::vector<std::shared_ptr<Shape>> CreateTriangleMesh(
         alphaMask, shadowAlphaMask, faceIndices);
     std::vector<std::shared_ptr<Shape>> tris;
     tris.reserve(nTriangles);  // 预分配内存
+
     for (int i = 0; i < nTriangles; ++i)
         tris.push_back(std::make_shared<Triangle>(ObjectToWorld, WorldToObject,
                                                   reverseOrientation, mesh, i));
@@ -198,7 +199,7 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
                          bool testAlphaTexture) const {
     ProfilePhase p(Prof::TriIntersect);
     ++nTests;
-    // Get triangle vertices in _p0_, _p1_, and _p2_
+    // 获取三角形顶点p0,p1,p2
     const Point3f &p0 = mesh->p[v[0]];
     const Point3f &p1 = mesh->p[v[1]];
     const Point3f &p2 = mesh->p[v[2]];
@@ -207,12 +208,13 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
 
     // Transform triangle vertices to ray coordinate space
 
-    // Translate vertices based on ray origin
+    // 平移变换光线到原点,同时变换顶点
     Point3f p0t = p0 - Vector3f(ray.o);
     Point3f p1t = p1 - Vector3f(ray.o);
     Point3f p2t = p2 - Vector3f(ray.o);
 
     // Permute components of triangle vertices and ray direction
+    // 最大分量变换到z轴
     int kz = MaxDimension(Abs(ray.d));
     int kx = kz + 1;
     if (kx == 3) kx = 0;
@@ -223,10 +225,11 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
     p1t = Permute(p1t, kx, ky, kz);
     p2t = Permute(p2t, kx, ky, kz);
 
-    // Apply shear transformation to translated vertex positions
+    // 错切变换，将光线变换到(0,0,1),同时变换顶点
     Float Sx = -d.x / d.z;
     Float Sy = -d.y / d.z;
     Float Sz = 1.f / d.z;
+    // 变换后的三角形三个顶点
     p0t.x += Sx * p0t.z;
     p0t.y += Sy * p0t.z;
     p1t.x += Sx * p1t.z;
@@ -234,12 +237,12 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
     p2t.x += Sx * p2t.z;
     p2t.y += Sy * p2t.z;
 
-    // Compute edge function coefficients _e0_, _e1_, and _e2_
+    // 计算各顶点到交点的向量与边的叉乘
     Float e0 = p1t.x * p2t.y - p1t.y * p2t.x;
     Float e1 = p2t.x * p0t.y - p2t.y * p0t.x;
     Float e2 = p0t.x * p1t.y - p0t.y * p1t.x;
 
-    // Fall back to double precision test at triangle edges
+    // 使用双精度重新计算边界点
     if (sizeof(Float) == sizeof(float) &&
         (e0 == 0.0f || e1 == 0.0f || e2 == 0.0f)) {
         double p2txp1ty = (double)p2t.x * (double)p1t.y;
@@ -253,23 +256,25 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
         e2 = (float)(p1typ0tx - p1txp0ty);
     }
 
-    // Perform triangle edge and determinant tests
+    // 三角形外
     if ((e0 < 0 || e1 < 0 || e2 < 0) && (e0 > 0 || e1 > 0 || e2 > 0))
         return false;
     Float det = e0 + e1 + e2;
-    if (det == 0) return false;
+    if (det == 0) return false;  // 排除边界
 
-    // Compute scaled hit distance to triangle and test against ray $t$ range
+    // 完成对z轴的变换,使光线方向= (0,0,1)（小优化）
     p0t.z *= Sz;
     p1t.z *= Sz;
     p2t.z *= Sz;
+
+    // 插值求出交点处z(t)值
     Float tScaled = e0 * p0t.z + e1 * p1t.z + e2 * p2t.z;
     if (det < 0 && (tScaled >= 0 || tScaled < ray.tMax * det))
-        return false;
+        return false;  // 三角形顶点顺时针编号
     else if (det > 0 && (tScaled <= 0 || tScaled > ray.tMax * det))
-        return false;
+        return false;  // 三角形顶点逆时针编号
 
-    // Compute barycentric coordinates and $t$ value for triangle intersection
+    // 计算最终交点t
     Float invDet = 1 / det;
     Float b0 = e0 * invDet;
     Float b1 = e1 * invDet;
@@ -299,27 +304,25 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
                    std::abs(invDet);
     if (t <= deltaT) return false;
 
-    // Compute triangle partial derivatives
+    // 计算三角形uv方向(偏导)
     Vector3f dpdu, dpdv;
     Point2f uv[3];
     GetUVs(uv);
 
     // Compute deltas for triangle partial derivatives
     Vector2f duv02 = uv[0] - uv[2], duv12 = uv[1] - uv[2];
-    Vector3f dp02 = p0 - p2, dp12 = p1 - p2;
+    Vector3f dp02 = p0 - p2, dp12 = p1 - p2;  // 三角形边向量
     Float determinant = duv02[0] * duv12[1] - duv02[1] * duv12[0];
     bool degenerateUV = std::abs(determinant) < 1e-8;
-    if (!degenerateUV) {
+    if (!degenerateUV) {  // 非退化矩阵 ->  (u,v)基向量线性无关
         Float invdet = 1 / determinant;
         dpdu = (duv12[1] * dp02 - duv02[1] * dp12) * invdet;
         dpdv = (-duv12[0] * dp02 + duv02[0] * dp12) * invdet;
     }
     if (degenerateUV || Cross(dpdu, dpdv).LengthSquared() == 0) {
-        // Handle zero determinant for triangle partial derivative matrix
+        // 退化时选择任意垂直于平面的正交单位基向量作为dpdu和dpdv
         Vector3f ng = Cross(p2 - p0, p1 - p0);
-        if (ng.LengthSquared() == 0)
-            // The triangle is actually degenerate; the intersection is
-            // bogus.
+        if (ng.LengthSquared() == 0)  // 退化三角形
             return false;
 
         CoordinateSystem(Normalize(ng), &dpdu, &dpdv);
@@ -335,8 +338,9 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
     Vector3f pError = gamma(7) * Vector3f(xAbsSum, yAbsSum, zAbsSum);
 
     // Interpolate $(u,v)$ parametric coordinates and hit point
-    Point3f pHit = b0 * p0 + b1 * p1 + b2 * p2;
-    Point2f uvHit = b0 * uv[0] + b1 * uv[1] + b2 * uv[2];
+    // 插值计算交点处的uv和交点（比通过t带入参数方程的精度更高）
+    Point3f pHit = b0 * p0 + b1 * p1 + b2 * p2;            // 世界坐标系中的交点
+    Point2f uvHit = b0 * uv[0] + b1 * uv[1] + b2 * uv[2];  // uv坐标系的插值点
 
     // Test intersection against alpha texture, if present
     if (testAlphaTexture && mesh->alphaMask) {
@@ -347,20 +351,20 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
     }
 
     // Fill in _SurfaceInteraction_ from triangle hit
+    // 顶点信息已经变换到世界坐标系
     *isect = SurfaceInteraction(pHit, pError, uvHit, -ray.d, dpdu, dpdv,
                                 Normal3f(0, 0, 0), Normal3f(0, 0, 0), ray.time,
                                 this, faceIndex);
 
-    // Override surface normal in _isect_ for triangle
+    // 覆盖交点处法向量（方向由模型的顶点绕序决定）
     isect->n = isect->shading.n = Normal3f(Normalize(Cross(dp02, dp12)));
-    if (reverseOrientation ^ transformSwapsHandedness)
+    if (reverseOrientation ^ transformSwapsHandedness)  // 决定法线方向的参数
         isect->n = isect->shading.n = -isect->n;
 
     if (mesh->n || mesh->s) {
-        // Initialize _Triangle_ shading geometry
+        // 初始化着色的几何信息
 
-        // Compute shading normal _ns_ for triangle
-        Normal3f ns;
+        Normal3f ns;  // 交点处的插值法向量
         if (mesh->n) {
             ns = (b0 * mesh->n[v[0]] + b1 * mesh->n[v[1]] + b2 * mesh->n[v[2]]);
             if (ns.LengthSquared() > 0)
@@ -370,7 +374,7 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
         } else
             ns = isect->n;
 
-        // Compute shading tangent _ss_ for triangle
+        // 交点处的插值切线向量
         Vector3f ss;
         if (mesh->s) {
             ss = (b0 * mesh->s[v[0]] + b1 * mesh->s[v[1]] + b2 * mesh->s[v[2]]);
@@ -381,11 +385,11 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
         } else
             ss = Normalize(isect->dpdu);
 
-        // Compute shading bitangent _ts_ for triangle and adjust _ss_
+        // 交点处的着色双切向量（正交于着色法向量和着色切向量），两个切向量构成切平面
         Vector3f ts = Cross(ss, ns);
         if (ts.LengthSquared() > 0.f) {
             ts = Normalize(ts);
-            ss = Cross(ts, ns);
+            ss = Cross(ts, ns);  // 正交化覆盖ss
         } else
             CoordinateSystem((Vector3f)ns, &ss, &ts);
 
@@ -423,7 +427,7 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
             }
         } else
             dndu = dndv = Normal3f(0, 0, 0);
-        if (reverseOrientation) ts = -ts;
+        if (reverseOrientation) ts = -ts;  // 换左右手性
         isect->SetShadingGeometry(ss, ts, dndu, dndv, true);
     }
 
