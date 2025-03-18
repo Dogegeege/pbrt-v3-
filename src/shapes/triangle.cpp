@@ -427,7 +427,7 @@ bool Triangle::Intersect(const Ray &ray, Float *tHit, SurfaceInteraction *isect,
             }
         } else
             dndu = dndv = Normal3f(0, 0, 0);
-        if (reverseOrientation) ts = -ts;  // 换左右手性
+        if (reverseOrientation) ts = -ts;  // 保持ss与ts的左右手关系???????????
         isect->SetShadingGeometry(ss, ts, dndu, dndv, true);
     }
 

@@ -40,7 +40,6 @@
 
 // core/pbrt.h*
 // Global Include Files
-#include <type_traits>
 #include <algorithm>
 #include <cinttypes>
 #include <cmath>
@@ -48,7 +47,9 @@
 #include <limits>
 #include <memory>
 #include <string>
+#include <type_traits>
 #include <vector>
+
 #include "error.h"
 #ifdef PBRT_HAVE_MALLOC_H
 #include <malloc.h>  // for _alloca, memalign
@@ -57,23 +58,23 @@
 #include <alloca.h>
 #endif
 #include <assert.h>
-#include <string.h>
 #include <glog/logging.h>
+#include <string.h>
 
 // Platform-specific definitions
 #if defined(_WIN32) || defined(_WIN64)
-  #define PBRT_IS_WINDOWS
+#define PBRT_IS_WINDOWS
 #endif
 
 #if defined(_MSC_VER)
-  #define PBRT_IS_MSVC
-  #if _MSC_VER == 1800
-    #define snprintf _snprintf
-  #endif
+#define PBRT_IS_MSVC
+#if _MSC_VER == 1800
+#define snprintf _snprintf
+#endif
 #endif
 
 #ifndef PBRT_L1_CACHE_LINE_SIZE
-  #define PBRT_L1_CACHE_LINE_SIZE 64
+#define PBRT_L1_CACHE_LINE_SIZE 64
 #endif
 
 #include <stdint.h>
@@ -88,7 +89,7 @@
 #endif
 
 // Global Macros
-#define ALLOCA(TYPE, COUNT) (TYPE *) alloca((COUNT) * sizeof(TYPE))
+#define ALLOCA(TYPE, COUNT) (TYPE *)alloca((COUNT) * sizeof(TYPE))
 
 namespace pbrt {
 
@@ -124,9 +125,9 @@ class CoefficientSpectrum;
 class RGBSpectrum;
 class SampledSpectrum;
 #ifdef PBRT_SAMPLED_SPECTRUM
-  typedef SampledSpectrum Spectrum;
+typedef SampledSpectrum Spectrum;
 #else
-  typedef RGBSpectrum Spectrum;
+typedef RGBSpectrum Spectrum;
 #endif
 class Camera;
 struct CameraSample;
@@ -155,9 +156,9 @@ class AreaLight;
 struct Distribution1D;
 class Distribution2D;
 #ifdef PBRT_FLOAT_AS_DOUBLE
-  typedef double Float;
+typedef double Float;
 #else
-  typedef float Float;
+typedef float Float;
 #endif  // PBRT_FLOAT_AS_DOUBLE
 class RNG;
 class ProgressReporter;
@@ -189,8 +190,9 @@ class TextureParams;
 
 // Global Constants
 #ifdef _MSC_VER
-#define MaxFloat std::numeric_limits<Float>::max()
-#define Infinity std::numeric_limits<Float>::infinity()
+#define MaxFloat std::numeric_limits<Float>::max()       // 最大浮点值
+#define Infinity std::numeric_limits<Float>::infinity()  // 无穷大浮点值
+
 #else
 static PBRT_CONSTEXPR Float MaxFloat = std::numeric_limits<Float>::max();
 static PBRT_CONSTEXPR Float Infinity = std::numeric_limits<Float>::infinity();
@@ -214,36 +216,52 @@ static PBRT_CONSTEXPR Float Sqrt2 = 1.41421356237309504880;
 #endif
 
 // Global Inline Functions
+
+/**
+ * @brief 将浮点数转换为无符号定点整数
+ */
 inline uint32_t FloatToBits(float f) {
     uint32_t ui;
     memcpy(&ui, &f, sizeof(float));
     return ui;
 }
 
+/**
+ * @brief 将无符号定点整数转换为浮点数
+ */
 inline float BitsToFloat(uint32_t ui) {
     float f;
     memcpy(&f, &ui, sizeof(uint32_t));
     return f;
 }
 
+/**
+ * @brief 将双精度浮点数转换为无符号定点整数
+ */
 inline uint64_t FloatToBits(double f) {
     uint64_t ui;
     memcpy(&ui, &f, sizeof(double));
     return ui;
 }
 
+/**
+ * @brief 将无符号定点整数转换为双精度浮点数
+ */
 inline double BitsToFloat(uint64_t ui) {
     double f;
     memcpy(&f, &ui, sizeof(uint64_t));
     return f;
 }
 
+/**
+ * @brief
+ * 返回浮点数`v`尾数`+1`的浮点数，两者差值为相同阶码下32位浮点的最小间隔
+ */
 inline float NextFloatUp(float v) {
-    // Handle infinity and negative zero for _NextFloatUp()_
-    if (std::isinf(v) && v > 0.) return v;
-    if (v == -0.f) v = 0.f;
+    if (std::isinf(v) && v > 0.) return v;  // 无穷大
+    if (v == -0.f) v = 0.f;                 //-0变为+0
 
-    // Advance _v_ to next higher float
+    // 得到下一个相邻浮点数
     uint32_t ui = FloatToBits(v);
     if (v >= 0)
         ++ui;
@@ -252,6 +270,10 @@ inline float NextFloatUp(float v) {
     return BitsToFloat(ui);
 }
 
+/**
+ * @brief
+ * 返回浮点数`v`尾数`-1`的浮点数，两者差值为相同阶码下32位浮点的最小间隔
+ */
 inline float NextFloatDown(float v) {
     // Handle infinity and positive zero for _NextFloatDown()_
     if (std::isinf(v) && v < 0.) return v;
@@ -264,6 +286,12 @@ inline float NextFloatDown(float v) {
     return BitsToFloat(ui);
 }
 
+/**
+ * @brief
+ * 返回浮点数`v`尾数`+delta`的浮点数，两者差值为相同阶码下64位浮点的最小间隔
+ * @param v 浮点数
+ * @param delta 间隔数
+ */
 inline double NextFloatUp(double v, int delta = 1) {
     if (std::isinf(v) && v > 0.) return v;
     if (v == -0.f) v = 0.f;
@@ -275,6 +303,12 @@ inline double NextFloatUp(double v, int delta = 1) {
     return BitsToFloat(ui);
 }
 
+/**
+ * @brief
+ * 返回浮点数`v`尾数`-delta`的浮点数，两者差值为相同阶码下64位浮点的最小间隔
+ * @param v 浮点数
+ * @param delta 间隔数
+ */
 inline double NextFloatDown(double v, int delta = 1) {
     if (std::isinf(v) && v < 0.) return v;
     if (v == 0.f) v = -0.f;
@@ -348,11 +382,11 @@ inline int Log2Int(uint64_t v) {
 #if defined(_WIN64)
     _BitScanReverse64(&lz, v);
 #else
-    if  (_BitScanReverse(&lz, v >> 32))
+    if (_BitScanReverse(&lz, v >> 32))
         lz += 32;
     else
         _BitScanReverse(&lz, v & 0xffffffff);
-#endif // _WIN64
+#endif  // _WIN64
     return lz;
 #else  // PBRT_IS_MSVC
     return 63 - __builtin_clzll(v);
@@ -480,9 +514,8 @@ inline Float Erf(Float x) {
 
     // A&S formula 7.1.26
     Float t = 1 / (1 + p * x);
-    Float y =
-        1 -
-        (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * std::exp(-x * x);
+    Float y = 1 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t *
+                      std::exp(-x * x);
 
     return sign * y;
 }

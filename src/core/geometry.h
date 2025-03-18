@@ -31,17 +31,18 @@
  */
 
 #if defined(_MSC_VER)
-    #define NOMINMAX
-    #pragma once
+#define NOMINMAX
+#pragma once
 #endif
 
 #ifndef PBRT_CORE_GEOMETRY_H
-    #define PBRT_CORE_GEOMETRY_H
+#define PBRT_CORE_GEOMETRY_H
 
-    // core/geometry.h*
-    #include <iterator>
-    #include "pbrt.h"
-    #include "stringprint.h"
+// core/geometry.h*
+#include <iterator>
+
+#include "pbrt.h"
+#include "stringprint.h"
 
 namespace pbrt {
 
@@ -65,7 +66,7 @@ inline bool isNaN(const int x) {
  */
 template <typename T>
 class Vector2 {
-   public:
+  public:
     // Vector2 Public Methods
 
     Vector2() { x = y = 0; }
@@ -73,7 +74,7 @@ class Vector2 {
     bool HasNaNs() const { return isNaN(x) || isNaN(y); }
     explicit Vector2(const Point2<T>& p);
     explicit Vector2(const Point3<T>& p);
-    #ifndef NDEBUG  // 调试模式
+#ifndef NDEBUG  // 调试模式
     // The default versions of these are fine for release builds; for debug
     // we define them so that we can add the Assert checks.
 
@@ -88,7 +89,7 @@ class Vector2 {
         y = v.y;
         return *this;
     }
-    #endif  // !NDEBUG
+#endif  // !NDEBUG
 
     Vector2<T> operator+(const Vector2<T>& v) const {
         DCHECK(!v.HasNaNs());
@@ -187,7 +188,8 @@ inline std::ostream& operator<<(std::ostream& os, const Vector2<T>& v) {
     return os;
 }
 /**
- * @brief 特化浮点类型`Float`，确保以小数格式输出，重载`<<`运算符，输出`[ x, y ]`
+ * @brief 特化浮点类型`Float`，确保以小数格式输出，重载`<<`运算符，输出`[ x, y
+ * ]`
  */
 template <>
 inline std::ostream& operator<<(std::ostream& os, const Vector2<Float>& v) {
@@ -203,7 +205,7 @@ inline std::ostream& operator<<(std::ostream& os, const Vector2<Float>& v) {
  */
 template <typename T>
 class Vector3 {
-   public:
+  public:
     // Vector3 Public Methods
 
     /**
@@ -231,7 +233,7 @@ class Vector3 {
     Vector3(T x, T y, T z) : x(x), y(y), z(z) { DCHECK(!HasNaNs()); }
     bool HasNaNs() const { return isNaN(x) || isNaN(y) || isNaN(z); }
     explicit Vector3(const Point3<T>& p);
-    #ifndef NDEBUG
+#ifndef NDEBUG
     // The default versions of these are fine for release builds; for debug
     // we define them so that we can add the Assert checks.
     Vector3(const Vector3<T>& v) {
@@ -248,7 +250,7 @@ class Vector3 {
         z = v.z;
         return *this;
     }
-    #endif  // !NDEBUG
+#endif  // !NDEBUG
     Vector3<T> operator+(const Vector3<T>& v) const {
         DCHECK(!v.HasNaNs());
         return Vector3(x + v.x, y + v.y, z + v.z);
@@ -271,8 +273,12 @@ class Vector3 {
         z -= v.z;
         return *this;
     }
-    bool operator==(const Vector3<T>& v) const { return x == v.x && y == v.y && z == v.z; }
-    bool operator!=(const Vector3<T>& v) const { return x != v.x || y != v.y || z != v.z; }
+    bool operator==(const Vector3<T>& v) const {
+        return x == v.x && y == v.y && z == v.z;
+    }
+    bool operator!=(const Vector3<T>& v) const {
+        return x != v.x || y != v.y || z != v.z;
+    }
     template <typename U>
     Vector3<T> operator*(U s) const {
         return Vector3<T>(s * x, s * y, s * z);
@@ -329,7 +335,8 @@ inline std::ostream& operator<<(std::ostream& os, const Vector3<T>& v) {
 }
 
 /**
- * @brief 特化浮点类型`Float`，确保以小数格式输出，重载`<<`运算符，输出`[ x, y, z ]`
+ * @brief 特化浮点类型`Float`，确保以小数格式输出，重载`<<`运算符，输出`[ x, y,
+ * z ]`
  */
 template <>
 inline std::ostream& operator<<(std::ostream& os, const Vector3<Float>& v) {
@@ -338,9 +345,9 @@ inline std::ostream& operator<<(std::ostream& os, const Vector3<Float>& v) {
 }
 
 typedef Vector2<Float> Vector2f;
-typedef Vector2<int>   Vector2i;
+typedef Vector2<int> Vector2i;
 typedef Vector3<Float> Vector3f;
-typedef Vector3<int>   Vector3i;
+typedef Vector3<int> Vector3i;
 
 /**
  * @brief 二维坐标
@@ -349,7 +356,7 @@ typedef Vector3<int>   Vector3i;
  */
 template <typename T>
 class Point2 {
-   public:
+  public:
     // Point2 Public Methods
     /**
      * @brief 三维坐标舍弃`z`分量转换为二维坐标，禁止隐式转换。
@@ -414,7 +421,7 @@ class Point2 {
         return Vector2<U>(x, y);
     }
 
-    #ifndef NDEBUG
+#ifndef NDEBUG
     Point2(const Point2<T>& p) {
         DCHECK(!p.HasNaNs());
         x = p.x;
@@ -427,7 +434,7 @@ class Point2 {
         y = p.y;
         return *this;
     }
-    #endif  // !NDEBUG
+#endif  // !NDEBUG
     /**
      * @brief 坐标加向量
      * @return 新的二维坐标
@@ -452,7 +459,7 @@ class Point2 {
         DCHECK(!v.HasNaNs());
         return Point2<T>(x - v.x, y - v.y);
     }
-    Point2<T>  operator-() const { return Point2<T>(-x, -y); }
+    Point2<T> operator-() const { return Point2<T>(-x, -y); }
     Point2<T>& operator-=(const Vector2<T>& v) {
         DCHECK(!v.HasNaNs());
         x -= v.x;
@@ -533,7 +540,7 @@ inline std::ostream& operator<<(std::ostream& os, const Point2<Float>& v) {
  */
 template <typename T>
 class Point3 {
-   public:
+  public:
     // Point3 Public Methods
 
     Point3() { x = y = z = 0; }
@@ -572,7 +579,7 @@ class Point3 {
     explicit operator Vector3<U>() const {
         return Vector3<U>(x, y, z);
     }
-    #ifndef NDEBUG
+#ifndef NDEBUG
     Point3(const Point3<T>& p) {
         DCHECK(!p.HasNaNs());
         x = p.x;
@@ -587,7 +594,7 @@ class Point3 {
         z = p.z;
         return *this;
     }
-    #endif  // !NDEBUG
+#endif  // !NDEBUG
     Point3<T> operator+(const Vector3<T>& v) const {
         DCHECK(!v.HasNaNs());
         return Point3<T>(x + v.x, y + v.y, z + v.z);
@@ -664,9 +671,13 @@ class Point3 {
         if (i == 1) return y;
         return z;
     }
-    bool      operator==(const Point3<T>& p) const { return x == p.x && y == p.y && z == p.z; }
-    bool      operator!=(const Point3<T>& p) const { return x != p.x || y != p.y || z != p.z; }
-    bool      HasNaNs() const { return isNaN(x) || isNaN(y) || isNaN(z); }
+    bool operator==(const Point3<T>& p) const {
+        return x == p.x && y == p.y && z == p.z;
+    }
+    bool operator!=(const Point3<T>& p) const {
+        return x != p.x || y != p.y || z != p.z;
+    }
+    bool HasNaNs() const { return isNaN(x) || isNaN(y) || isNaN(z); }
     Point3<T> operator-() const { return Point3<T>(-x, -y, -z); }
 
     // Point3 Public Data
@@ -687,9 +698,9 @@ inline std::ostream& operator<<(std::ostream& os, const Point3<Float>& v) {
 }
 
 typedef Point2<Float> Point2f;
-typedef Point2<int>   Point2i;
+typedef Point2<int> Point2i;
 typedef Point3<Float> Point3f;
-typedef Point3<int>   Point3i;
+typedef Point3<int> Point3i;
 
 /**
  * @brief 三维法线，定义于曲面上一点，任意两条不平行的切线的外积方向。
@@ -702,7 +713,7 @@ typedef Point3<int>   Point3i;
  */
 template <typename T>
 class Normal3 {
-   public:
+  public:
     // Normal3 Public Methods
 
     Normal3() { x = y = z = 0; }
@@ -772,7 +783,7 @@ class Normal3 {
      */
     Float Length() const { return std::sqrt(LengthSquared()); }
 
-    #ifndef NDEBUG
+#ifndef NDEBUG
     Normal3<T>(const Normal3<T>& n) {
         DCHECK(!n.HasNaNs());
         x = n.x;
@@ -787,10 +798,16 @@ class Normal3 {
         z = n.z;
         return *this;
     }
-    #endif  // !NDEBUG
-    explicit Normal3<T>(const Vector3<T>& v) : x(v.x), y(v.y), z(v.z) { DCHECK(!v.HasNaNs()); }
-    bool operator==(const Normal3<T>& n) const { return x == n.x && y == n.y && z == n.z; }
-    bool operator!=(const Normal3<T>& n) const { return x != n.x || y != n.y || z != n.z; }
+#endif  // !NDEBUG
+    explicit Normal3<T>(const Vector3<T>& v) : x(v.x), y(v.y), z(v.z) {
+        DCHECK(!v.HasNaNs());
+    }
+    bool operator==(const Normal3<T>& n) const {
+        return x == n.x && y == n.y && z == n.z;
+    }
+    bool operator!=(const Normal3<T>& n) const {
+        return x != n.x || y != n.y || z != n.z;
+    }
 
     T operator[](int i) const {
         DCHECK(i >= 0 && i <= 2);
@@ -832,15 +849,15 @@ typedef Normal3<Float> Normal3f;
  */
 template <typename T>
 class Bounds2 {
-   public:
+  public:
     // Bounds2 Public Methods
 
     // 默认构造一个无穷大的包围盒
     Bounds2() {
         T minNum = std::numeric_limits<T>::lowest();
         T maxNum = std::numeric_limits<T>::max();
-        pMin     = Point2<T>(maxNum, maxNum);
-        pMax     = Point2<T>(minNum, minNum);
+        pMin = Point2<T>(maxNum, maxNum);
+        pMax = Point2<T>(minNum, minNum);
     }
     explicit Bounds2(const Point2<T>& p) : pMin(p), pMax(p) {}
     Bounds2(const Point2<T>& p1, const Point2<T>& p2) {
@@ -856,7 +873,7 @@ class Bounds2 {
     }
 
     Vector2<T> Diagonal() const { return pMax - pMin; }
-    T          Area() const {
+    T Area() const {
         Vector2<T> d = pMax - pMin;
         return (d.x * d.y);
     }
@@ -879,13 +896,20 @@ class Bounds2 {
         DCHECK(i == 0 || i == 1);
         return (i == 0) ? pMin : pMax;
     }
-    bool operator==(const Bounds2<T>& b) const { return b.pMin == pMin && b.pMax == pMax; }
-    bool operator!=(const Bounds2<T>& b) const { return b.pMin != pMin || b.pMax != pMax; }
+    bool operator==(const Bounds2<T>& b) const {
+        return b.pMin == pMin && b.pMax == pMax;
+    }
+    bool operator!=(const Bounds2<T>& b) const {
+        return b.pMin != pMin || b.pMax != pMax;
+    }
 
     /**
      * @brief 对顶角之间线性插值
      */
-    Point2<T> Lerp(const Point2f& t) const { return Point2<T>(pbrt::Lerp(t.x, pMin.x, pMax.x), pbrt::Lerp(t.y, pMin.y, pMax.y)); }
+    Point2<T> Lerp(const Point2f& t) const {
+        return Point2<T>(pbrt::Lerp(t.x, pMin.x, pMax.x),
+                         pbrt::Lerp(t.y, pMin.y, pMax.y));
+    }
 
     /**
      * @brief 计算点`p`相对于包围盒的偏移量`o`，`o`的每个分量都在[0, 1]之间
@@ -904,7 +928,7 @@ class Bounds2 {
      * @param rad 待返回的参数，外接球的半径，如果不存在外接球则`rad`为0
      */
     void BoundingSphere(Point2<T>* c, Float* rad) const {
-        *c   = (pMin + pMax) / 2;
+        *c = (pMin + pMax) / 2;
         *rad = Inside(*c, *this) ? Distance(*c, pMax) : 0;
     }
     friend std::ostream& operator<<(std::ostream& os, const Bounds2<T>& b) {
@@ -924,25 +948,31 @@ class Bounds2 {
  */
 template <typename T>
 class Bounds3 {
-   public:
+  public:
     // Bounds3 Public Methods
 
     // 默认构造一个无穷大的包围盒
     Bounds3() {
         T minNum = std::numeric_limits<T>::lowest();
         T maxNum = std::numeric_limits<T>::max();
-        pMin     = Point3<T>(maxNum, maxNum, maxNum);
-        pMax     = Point3<T>(minNum, minNum, minNum);
+        pMin = Point3<T>(maxNum, maxNum, maxNum);
+        pMax = Point3<T>(minNum, minNum, minNum);
     }
     explicit Bounds3(const Point3<T>& p) : pMin(p), pMax(p) {}
     Bounds3(const Point3<T>& p1, const Point3<T>& p2)
-        : pMin(std::min(p1.x, p2.x), std::min(p1.y, p2.y), std::min(p1.z, p2.z)),
-          pMax(std::max(p1.x, p2.x), std::max(p1.y, p2.y), std::max(p1.z, p2.z)) {}
+        : pMin(std::min(p1.x, p2.x), std::min(p1.y, p2.y),
+               std::min(p1.z, p2.z)),
+          pMax(std::max(p1.x, p2.x), std::max(p1.y, p2.y),
+               std::max(p1.z, p2.z)) {}
 
     const Point3<T>& operator[](int i) const;
-    Point3<T>&       operator[](int i);
-    bool             operator==(const Bounds3<T>& b) const { return b.pMin == pMin && b.pMax == pMax; }
-    bool             operator!=(const Bounds3<T>& b) const { return b.pMin != pMin || b.pMax != pMax; }
+    Point3<T>& operator[](int i);
+    bool operator==(const Bounds3<T>& b) const {
+        return b.pMin == pMin && b.pMax == pMax;
+    }
+    bool operator!=(const Bounds3<T>& b) const {
+        return b.pMin != pMin || b.pMax != pMax;
+    }
 
     /**
      * @brief 返回包围盒的8个角坐标
@@ -950,10 +980,12 @@ class Bounds3 {
      */
     Point3<T> Corner(int corner) const {
         DCHECK(corner >= 0 && corner < 8);
-        return Point3<T>((*this)[(corner & 1)].x, (*this)[(corner & 2) ? 1 : 0].y, (*this)[(corner & 4) ? 1 : 0].z);
+        return Point3<T>((*this)[(corner & 1)].x,
+                         (*this)[(corner & 2) ? 1 : 0].y,
+                         (*this)[(corner & 4) ? 1 : 0].z);
     }
     Vector3<T> Diagonal() const { return pMax - pMin; }
-    T          SurfaceArea() const {
+    T SurfaceArea() const {
         Vector3<T> d = Diagonal();
         return 2 * (d.x * d.y + d.x * d.z + d.y * d.z);
     }
@@ -979,7 +1011,9 @@ class Bounds3 {
      * @brief 对顶角之间线性插值
      */
     Point3<T> Lerp(const Point3f& t) const {
-        return Point3<T>(pbrt::Lerp(t.x, pMin.x, pMax.x), pbrt::Lerp(t.y, pMin.y, pMax.y), pbrt::Lerp(t.z, pMin.z, pMax.z));
+        return Point3<T>(pbrt::Lerp(t.x, pMin.x, pMax.x),
+                         pbrt::Lerp(t.y, pMin.y, pMax.y),
+                         pbrt::Lerp(t.z, pMin.z, pMax.z));
     }
 
     /**
@@ -1001,8 +1035,10 @@ class Bounds3 {
     explicit operator Bounds3<U>() const {
         return Bounds3<U>((Point3<U>)pMin, (Point3<U>)pMax);
     }
-    bool                 IntersectP(const Ray& ray, Float* hitt0 = nullptr, Float* hitt1 = nullptr) const;
-    inline bool          IntersectP(const Ray& ray, const Vector3f& invDir, const int dirIsNeg[3]) const;
+    bool IntersectP(const Ray& ray, Float* hitt0 = nullptr,
+                    Float* hitt1 = nullptr) const;
+    inline bool IntersectP(const Ray& ray, const Vector3f& invDir,
+                           const int dirIsNeg[3]) const;
     friend std::ostream& operator<<(std::ostream& os, const Bounds3<T>& b) {
         os << "[ " << b.pMin << " - " << b.pMax << " ]";
         return os;
@@ -1014,12 +1050,13 @@ class Bounds3 {
 };
 
 typedef Bounds2<Float> Bounds2f;
-typedef Bounds2<int>   Bounds2i;
+typedef Bounds2<int> Bounds2i;
 typedef Bounds3<Float> Bounds3f;
-typedef Bounds3<int>   Bounds3i;
+typedef Bounds3<int> Bounds3i;
 
 /**
- * @brief `Bounds2i`的迭代器，对于二维整数型包围盒，可以通过迭代器遍历包围盒内的所有像素。
+ * @brief
+ `Bounds2i`的迭代器，对于二维整数型包围盒，可以通过迭代器遍历包围盒内的所有像素。
  *
  * 例如：
  *
@@ -1030,8 +1067,9 @@ typedef Bounds3<int>   Bounds3i;
  * @param pt: 二维坐标
  */
 class Bounds2iIterator : public std::forward_iterator_tag {
-   public:
-    Bounds2iIterator(const Bounds2i& b, const Point2i& pt) : p(pt), bounds(&b) {}
+  public:
+    Bounds2iIterator(const Bounds2i& b, const Point2i& pt)
+        : p(pt), bounds(&b) {}
     // 前置递增运算符
     Bounds2iIterator operator++() {
         advance();
@@ -1043,12 +1081,16 @@ class Bounds2iIterator : public std::forward_iterator_tag {
         advance();
         return old;
     }
-    bool operator==(const Bounds2iIterator& bi) const { return p == bi.p && bounds == bi.bounds; }
-    bool operator!=(const Bounds2iIterator& bi) const { return p != bi.p || bounds != bi.bounds; }
+    bool operator==(const Bounds2iIterator& bi) const {
+        return p == bi.p && bounds == bi.bounds;
+    }
+    bool operator!=(const Bounds2iIterator& bi) const {
+        return p != bi.p || bounds != bi.bounds;
+    }
 
     Point2i operator*() const { return p; }  // 解引用
 
-   private:
+  private:
     void advance() {
         ++p.x;
         if (p.x == bounds->pMax.x) {  // 下一行
@@ -1056,7 +1098,7 @@ class Bounds2iIterator : public std::forward_iterator_tag {
             ++p.y;
         }
     }
-    Point2i         p;
+    Point2i p;
     const Bounds2i* bounds;
 };
 /**
@@ -1068,72 +1110,82 @@ class Bounds2iIterator : public std::forward_iterator_tag {
  * @param medium 射线端点所在的介质属性（如空气、水、玻璃等）
  */
 class Ray {
-   public:
+  public:
     // Ray Public Methods
     Ray() : tMax(Infinity), time(0.f), medium(nullptr) {}
-    Ray(const Point3f& o, const Vector3f& d, Float tMax = Infinity, Float time = 0.f, const Medium* medium = nullptr)
+    Ray(const Point3f& o, const Vector3f& d, Float tMax = Infinity,
+        Float time = 0.f, const Medium* medium = nullptr)
         : o(o), d(d), tMax(tMax), time(time), medium(medium) {}
     /**
      * @param t 射线参数
      * @return 射线在参数`t`处的位置
      */
-    Point3f              operator()(Float t) const { return o + d * t; }
-    bool                 HasNaNs() const { return (o.HasNaNs() || d.HasNaNs() || isNaN(tMax)); }
+    Point3f operator()(Float t) const { return o + d * t; }
+    bool HasNaNs() const { return (o.HasNaNs() || d.HasNaNs() || isNaN(tMax)); }
     friend std::ostream& operator<<(std::ostream& os, const Ray& r) {
-        os << "[o=" << r.o << ", d=" << r.d << ", tMax=" << r.tMax << ", time=" << r.time << "]";
+        os << "[o=" << r.o << ", d=" << r.d << ", tMax=" << r.tMax
+           << ", time=" << r.time << "]";
         return os;
     }
 
     // Ray Public Data
 
-    Point3f       o;
-    Vector3f      d;
+    Point3f o;
+    Vector3f d;
     mutable Float tMax;  // mutable 修饰的变量，可以在const函数中修改。
-    Float         time;
+    Float time;
     const Medium* medium;
 };
 
 /**
  * @brief 继承自`Ray`，表示差分射线，在抗锯齿中对相邻像素和射线采样。
- * @param hasDifferentials 是否使用差分射线，如果为`true` 则表示使用差分射线，否则表示不使用差分射线，可以视为对象`Ray`。
+ * @param hasDifferentials 是否使用差分射线，如果为`true`
+ * 则表示使用差分射线，否则表示不使用差分射线，可以视为对象`Ray`。
  * @param rxOrigin
  * @param ryOrigin
  * @param rxDirection
  * @param ryDirection
  */
 class RayDifferential : public Ray {
-   public:
+  public:
     // RayDifferential Public Methods
 
     RayDifferential() { hasDifferentials = false; }
-    RayDifferential(const Point3f& o, const Vector3f& d, Float tMax = Infinity, Float time = 0.f, const Medium* medium = nullptr)
+    RayDifferential(const Point3f& o, const Vector3f& d, Float tMax = Infinity,
+                    Float time = 0.f, const Medium* medium = nullptr)
         : Ray(o, d, tMax, time, medium) {
         hasDifferentials = false;
     }
     RayDifferential(const Ray& ray) : Ray(ray) { hasDifferentials = false; }
 
     bool HasNaNs() const {
-        return Ray::HasNaNs() || (hasDifferentials && (rxOrigin.HasNaNs() || ryOrigin.HasNaNs() || rxDirection.HasNaNs() || ryDirection.HasNaNs()));
+        return Ray::HasNaNs() ||
+               (hasDifferentials &&
+                (rxOrigin.HasNaNs() || ryOrigin.HasNaNs() ||
+                 rxDirection.HasNaNs() || ryDirection.HasNaNs()));
     }
     /**
      * @brief 放缩差分参数
      */
     void ScaleDifferentials(Float s) {
-        rxOrigin    = o + (rxOrigin - o) * s;
-        ryOrigin    = o + (ryOrigin - o) * s;
+        rxOrigin = o + (rxOrigin - o) * s;
+        ryOrigin = o + (ryOrigin - o) * s;
         rxDirection = d + (rxDirection - d) * s;
         ryDirection = d + (ryDirection - d) * s;
     }
-    friend std::ostream& operator<<(std::ostream& os, const RayDifferential& r) {
-        os << "[ " << (Ray&)r << " has differentials: " << (r.hasDifferentials ? "true" : "false") << ", xo = " << r.rxOrigin
-           << ", xd = " << r.rxDirection << ", yo = " << r.ryOrigin << ", yd = " << r.ryDirection << " ]";
+    friend std::ostream& operator<<(std::ostream& os,
+                                    const RayDifferential& r) {
+        os << "[ " << (Ray&)r
+           << " has differentials: " << (r.hasDifferentials ? "true" : "false")
+           << ", xo = " << r.rxOrigin << ", xd = " << r.rxDirection
+           << ", yo = " << r.ryOrigin << ", yd = " << r.ryDirection << " ]";
         return os;
     }
 
     // RayDifferential Public Data
 
-    bool     hasDifferentials;
-    Point3f  rxOrigin, ryOrigin;
+    bool hasDifferentials;
+    Point3f rxOrigin, ryOrigin;
     Vector3f rxDirection, ryDirection;
 };
 
@@ -1189,7 +1241,8 @@ inline Vector3<T> Cross(const Vector3<T>& v1, const Vector3<T>& v2) {
     // 固定转化为双精度类型
     double v1x = v1.x, v1y = v1.y, v1z = v1.z;
     double v2x = v2.x, v2y = v2.y, v2z = v2.z;
-    return Vector3<T>((v1y * v2z) - (v1z * v2y), (v1z * v2x) - (v1x * v2z), (v1x * v2y) - (v1y * v2x));
+    return Vector3<T>((v1y * v2z) - (v1z * v2y), (v1z * v2x) - (v1x * v2z),
+                      (v1x * v2y) - (v1y * v2x));
 }
 
 /**
@@ -1204,7 +1257,8 @@ inline Vector3<T> Cross(const Vector3<T>& v1, const Normal3<T>& v2) {
     // 固定转化为双精度类型
     double v1x = v1.x, v1y = v1.y, v1z = v1.z;
     double v2x = v2.x, v2y = v2.y, v2z = v2.z;
-    return Vector3<T>((v1y * v2z) - (v1z * v2y), (v1z * v2x) - (v1x * v2z), (v1x * v2y) - (v1y * v2x));
+    return Vector3<T>((v1y * v2z) - (v1z * v2y), (v1z * v2x) - (v1x * v2z),
+                      (v1x * v2y) - (v1y * v2x));
 }
 
 /**
@@ -1219,7 +1273,8 @@ inline Vector3<T> Cross(const Normal3<T>& v1, const Vector3<T>& v2) {
     // 固定转化为双精度类型
     double v1x = v1.x, v1y = v1.y, v1z = v1.z;
     double v2x = v2.x, v2y = v2.y, v2z = v2.z;
-    return Vector3<T>((v1y * v2z) - (v1z * v2y), (v1z * v2x) - (v1x * v2z), (v1x * v2y) - (v1y * v2x));
+    return Vector3<T>((v1y * v2z) - (v1z * v2y), (v1z * v2x) - (v1x * v2z),
+                      (v1x * v2y) - (v1y * v2x));
 }
 
 /**
@@ -1260,7 +1315,8 @@ int MaxDimension(const Vector3<T>& v) {
  */
 template <typename T>
 Vector3<T> Min(const Vector3<T>& p1, const Vector3<T>& p2) {
-    return Vector3<T>(std::min(p1.x, p2.x), std::min(p1.y, p2.y), std::min(p1.z, p2.z));
+    return Vector3<T>(std::min(p1.x, p2.x), std::min(p1.y, p2.y),
+                      std::min(p1.z, p2.z));
 }
 
 /**
@@ -1269,7 +1325,8 @@ Vector3<T> Min(const Vector3<T>& p1, const Vector3<T>& p2) {
  */
 template <typename T>
 Vector3<T> Max(const Vector3<T>& p1, const Vector3<T>& p2) {
-    return Vector3<T>(std::max(p1.x, p2.x), std::max(p1.y, p2.y), std::max(p1.z, p2.z));
+    return Vector3<T>(std::max(p1.x, p2.x), std::max(p1.y, p2.y),
+                      std::max(p1.z, p2.z));
 }
 /**
  * @brief 根据给定索引重新排列向量分量
@@ -1291,7 +1348,8 @@ Vector3<T> Permute(const Vector3<T>& v, int x, int y, int z) {
  * @param v3 构造的单位向量
  */
 template <typename T>
-inline void CoordinateSystem(const Vector3<T>& v1, Vector3<T>* v2, Vector3<T>* v3) {
+inline void CoordinateSystem(const Vector3<T>& v1, Vector3<T>* v2,
+                             Vector3<T>* v3) {
     if (std::abs(v1.x) > std::abs(v1.y))
         *v2 = Vector3<T>(-v1.z, 0, v1.x) / std::sqrt(v1.x * v1.x + v1.z * v1.z);
     else
@@ -1382,7 +1440,8 @@ Point3<T> Lerp(Float t, const Point3<T>& p0, const Point3<T>& p1) {
  */
 template <typename T>
 Point3<T> Min(const Point3<T>& p1, const Point3<T>& p2) {
-    return Point3<T>(std::min(p1.x, p2.x), std::min(p1.y, p2.y), std::min(p1.z, p2.z));
+    return Point3<T>(std::min(p1.x, p2.x), std::min(p1.y, p2.y),
+                     std::min(p1.z, p2.z));
 }
 
 /**
@@ -1391,7 +1450,8 @@ Point3<T> Min(const Point3<T>& p1, const Point3<T>& p2) {
  */
 template <typename T>
 Point3<T> Max(const Point3<T>& p1, const Point3<T>& p2) {
-    return Point3<T>(std::max(p1.x, p2.x), std::max(p1.y, p2.y), std::max(p1.z, p2.z));
+    return Point3<T>(std::max(p1.x, p2.x), std::max(p1.y, p2.y),
+                     std::max(p1.z, p2.z));
 }
 
 /**
@@ -1660,7 +1720,8 @@ bool Overlaps(const Bounds3<T>& b1, const Bounds3<T>& b2) {
  */
 template <typename T>
 bool Inside(const Point3<T>& p, const Bounds3<T>& b) {
-    return (p.x >= b.pMin.x && p.x <= b.pMax.x && p.y >= b.pMin.y && p.y <= b.pMax.y && p.z >= b.pMin.z && p.z <= b.pMax.z);
+    return (p.x >= b.pMin.x && p.x <= b.pMax.x && p.y >= b.pMin.y &&
+            p.y <= b.pMax.y && p.z >= b.pMin.z && p.z <= b.pMax.z);
 }
 
 /**
@@ -1669,7 +1730,8 @@ bool Inside(const Point3<T>& p, const Bounds3<T>& b) {
  */
 template <typename T>
 bool InsideExclusive(const Point3<T>& p, const Bounds3<T>& b) {
-    return (p.x >= b.pMin.x && p.x < b.pMax.x && p.y >= b.pMin.y && p.y < b.pMax.y && p.z >= b.pMin.z && p.z < b.pMax.z);
+    return (p.x >= b.pMin.x && p.x < b.pMax.x && p.y >= b.pMin.y &&
+            p.y < b.pMax.y && p.z >= b.pMin.z && p.z < b.pMax.z);
 }
 
 /**
@@ -1680,7 +1742,8 @@ bool InsideExclusive(const Point3<T>& p, const Bounds3<T>& b) {
  */
 template <typename T, typename U>
 inline Bounds3<T> Expand(const Bounds3<T>& b, U delta) {
-    return Bounds3<T>(b.pMin - Vector3<T>(delta, delta, delta), b.pMax + Vector3<T>(delta, delta, delta));
+    return Bounds3<T>(b.pMin - Vector3<T>(delta, delta, delta),
+                      b.pMax + Vector3<T>(delta, delta, delta));
 }
 
 // Minimum squared distance from point to box; returns zero if point is
@@ -1765,7 +1828,8 @@ bool Overlaps(const Bounds2<T>& ba, const Bounds2<T>& bb) {
  */
 template <typename T>
 bool Inside(const Point2<T>& pt, const Bounds2<T>& b) {
-    return (pt.x >= b.pMin.x && pt.x <= b.pMax.x && pt.y >= b.pMin.y && pt.y <= b.pMax.y);
+    return (pt.x >= b.pMin.x && pt.x <= b.pMax.x && pt.y >= b.pMin.y &&
+            pt.y <= b.pMax.y);
 }
 
 /**
@@ -1774,7 +1838,8 @@ bool Inside(const Point2<T>& pt, const Bounds2<T>& b) {
  */
 template <typename T>
 bool InsideExclusive(const Point2<T>& pt, const Bounds2<T>& b) {
-    return (pt.x >= b.pMin.x && pt.x < b.pMax.x && pt.y >= b.pMin.y && pt.y < b.pMax.y);
+    return (pt.x >= b.pMin.x && pt.x < b.pMax.x && pt.y >= b.pMin.y &&
+            pt.y < b.pMax.y);
 }
 
 /**
@@ -1785,7 +1850,8 @@ bool InsideExclusive(const Point2<T>& pt, const Bounds2<T>& b) {
  */
 template <typename T, typename U>
 Bounds2<T> Expand(const Bounds2<T>& b, U delta) {
-    return Bounds2<T>(b.pMin - Vector2<T>(delta, delta), b.pMax + Vector2<T>(delta, delta));
+    return Bounds2<T>(b.pMin - Vector2<T>(delta, delta),
+                      b.pMax + Vector2<T>(delta, delta));
 }
 
 /**
@@ -1796,14 +1862,15 @@ Bounds2<T> Expand(const Bounds2<T>& b, U delta) {
  *@return 如果判断成功相交返回`true`，否则返回`false`
  */
 template <typename T>
-inline bool Bounds3<T>::IntersectP(const Ray& ray, Float* hitt0, Float* hitt1) const {
+inline bool Bounds3<T>::IntersectP(const Ray& ray, Float* hitt0,
+                                   Float* hitt1) const {
     Float t0 = 0, t1 = ray.tMax;
     for (int i = 0; i < 3; ++i) {
         // 根据包围盒的每个对面计算出射线的参数
 
         Float invRayDir = 1 / ray.d[i];
-        Float tNear     = (pMin[i] - ray.o[i]) * invRayDir;
-        Float tFar      = (pMax[i] - ray.o[i]) * invRayDir;
+        Float tNear = (pMin[i] - ray.o[i]) * invRayDir;
+        Float tFar = (pMax[i] - ray.o[i]) * invRayDir;
 
         // 更新远近交点
         if (tNear > tFar) std::swap(tNear, tFar);
@@ -1829,13 +1896,14 @@ inline bool Bounds3<T>::IntersectP(const Ray& ray, Float* hitt0, Float* hitt1) c
  * @return 如果判断成功相交返回`true`，否则返回`false`
  */
 template <typename T>
-inline bool Bounds3<T>::IntersectP(const Ray& ray, const Vector3f& invDir, const int dirIsNeg[3]) const {
+inline bool Bounds3<T>::IntersectP(const Ray& ray, const Vector3f& invDir,
+                                   const int dirIsNeg[3]) const {
     const Bounds3f& bounds = *this;
     // Check for ray intersection against $x$ and $y$ slabs
-    Float           tMin   = (bounds[dirIsNeg[0]].x - ray.o.x) * invDir.x;
-    Float           tMax   = (bounds[1 - dirIsNeg[0]].x - ray.o.x) * invDir.x;
-    Float           tyMin  = (bounds[dirIsNeg[1]].y - ray.o.y) * invDir.y;
-    Float           tyMax  = (bounds[1 - dirIsNeg[1]].y - ray.o.y) * invDir.y;
+    Float tMin = (bounds[dirIsNeg[0]].x - ray.o.x) * invDir.x;
+    Float tMax = (bounds[1 - dirIsNeg[0]].x - ray.o.x) * invDir.x;
+    Float tyMin = (bounds[dirIsNeg[1]].y - ray.o.y) * invDir.y;
+    Float tyMax = (bounds[1 - dirIsNeg[1]].y - ray.o.y) * invDir.y;
 
     // Update _tMax_ and _tyMax_ to ensure robust bounds intersection
     tMax *= 1 + 2 * gamma(3);
@@ -1856,8 +1924,9 @@ inline bool Bounds3<T>::IntersectP(const Ray& ray, const Vector3f& invDir, const
     return (tMin < ray.tMax) && (tMax > 0);
 }
 
-inline Point3f OffsetRayOrigin(const Point3f& p, const Vector3f& pError, const Normal3f& n, const Vector3f& w) {
-    Float    d      = Dot(Abs(n), pError);
+inline Point3f OffsetRayOrigin(const Point3f& p, const Vector3f& pError,
+                               const Normal3f& n, const Vector3f& w) {
+    Float d = Dot(Abs(n), pError);
     Vector3f offset = d * Vector3f(n);
     if (Dot(w, n) < 0) offset = -offset;
     Point3f po = p + offset;
@@ -1872,11 +1941,15 @@ inline Point3f OffsetRayOrigin(const Point3f& p, const Vector3f& pError, const N
 }
 
 inline Vector3f SphericalDirection(Float sinTheta, Float cosTheta, Float phi) {
-    return Vector3f(sinTheta * std::cos(phi), sinTheta * std::sin(phi), cosTheta);
+    return Vector3f(sinTheta * std::cos(phi), sinTheta * std::sin(phi),
+                    cosTheta);
 }
 
-inline Vector3f SphericalDirection(Float sinTheta, Float cosTheta, Float phi, const Vector3f& x, const Vector3f& y, const Vector3f& z) {
-    return sinTheta * std::cos(phi) * x + sinTheta * std::sin(phi) * y + cosTheta * z;
+inline Vector3f SphericalDirection(Float sinTheta, Float cosTheta, Float phi,
+                                   const Vector3f& x, const Vector3f& y,
+                                   const Vector3f& z) {
+    return sinTheta * std::cos(phi) * x + sinTheta * std::sin(phi) * y +
+           cosTheta * z;
 }
 
 inline Float SphericalTheta(const Vector3f& v) {
